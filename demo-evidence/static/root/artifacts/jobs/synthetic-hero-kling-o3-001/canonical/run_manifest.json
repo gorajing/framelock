@@ -1,0 +1,163 @@
+{
+  "claim": "Protected core verified \u2014 canonical pre-encode frame sequence.",
+  "created_at": "2026-07-18T02:33:33.042557+00:00",
+  "digest_sha256": "23faf813cb8ec908ad1609104138540125544743beb8ed78ff3940f0404afb3d",
+  "generated_decode_provenance": {
+    "canonical_color_conversion": "BT.709 limited-range YUV to full-range RGB24",
+    "color_conversion_assumption": "Source color metadata was absent or incomplete; FrameLock explicitly assumed BT.709 matrix and limited-range YUV for canonical decoding.",
+    "color_conversion_basis": "explicit_bt709_limited_fallback",
+    "decode_argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-loglevel",
+      "error",
+      "-xerror",
+      "-noautorotate",
+      "-err_detect",
+      "explode",
+      "-i",
+      "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+      "-map",
+      "0:V:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-vf",
+      "scale=in_color_matrix=bt709:out_color_matrix=bt709:in_range=tv:out_range=pc:flags=accurate_rnd+full_chroma_int,format=rgb24",
+      "-fps_mode",
+      "passthrough",
+      "-c:v",
+      "png",
+      "-pix_fmt",
+      "rgb24",
+      "-compression_level",
+      "4",
+      "-pred",
+      "mixed",
+      "-threads:v",
+      "1",
+      "-start_number",
+      "0",
+      "-f",
+      "image2",
+      "-n",
+      "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/.generated_frames.tmp-udkealai/frame_%06d.png"
+    ],
+    "decoded_frame_count": 121,
+    "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+    "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+    "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "frame_rate_denominator": 1,
+    "frame_rate_numerator": 24,
+    "height": 720,
+    "max_pts_residual_microseconds": 0,
+    "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+    "probe_argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "V:0",
+      "-show_streams",
+      "-show_format",
+      "-show_frames",
+      "-show_entries",
+      "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+      "-of",
+      "json",
+      "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4"
+    ],
+    "probe_json_sha256": "147eed32930ab9a1be4504cc3a5204acf1eff3d441dff3b059bed9c3da8bf969",
+    "source_chroma_location": "left",
+    "source_codec": "h264",
+    "source_color_primaries": null,
+    "source_color_range": null,
+    "source_color_space": null,
+    "source_color_transfer": null,
+    "source_container": "mp4",
+    "source_file_sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+    "source_media_path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+    "source_pixel_format": "yuv420p",
+    "time_base_denominator": 12288,
+    "time_base_numerator": 1,
+    "width": 1280
+  },
+  "generation_assessment": {
+    "automatic_checks_passed": true,
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/comparability.json",
+    "rule_version": "framelock-comparability-p0-v1",
+    "sha256": "8f5fb390bbf32f22e82e154337e43e0ca5c8ac03c2021bce6c33d5ba05d2765d"
+  },
+  "job": {
+    "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+    "generation_digest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec",
+    "id": "synthetic-hero-kling-o3-001",
+    "model_output_sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+    "request_id": "019f72e4-5e1e-7143-bf91-e3aac20328da",
+    "restoration_mask_sha256": "ee375951c0fe4233ad442d7b18a23d770b63a0f195bb8fac1bae769d03b7b2f3",
+    "source_sha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d"
+  },
+  "preview": {
+    "label": "Preview derived from verified canonical frames",
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/preview.mp4",
+    "sha256": "154178d10072cad6437459bc8a92ccecfc9a847e8af3a07fca682c3774478876"
+  },
+  "proof": {
+    "audit_path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/audit.json",
+    "audit_sha256": "06590d6521d90a111b3281c5c13e04c07ec15c187ccb6bfad7373e8efa5e5799",
+    "changed_core_channel_samples": 0,
+    "deterministic_composition_checked": true,
+    "deterministic_composition_passed": true,
+    "frames_audited": 121,
+    "manifest_digest_sha256": "bbc89eae65703b19c3ad61b4c46e59b42fd07261264d33d7824a081b3cc62334",
+    "manifest_path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/proof_manifest.json",
+    "manifest_sha256": "3d422399eb6eea30346ddd239c9370333999fa867127a73bb9bd41ba10e6f644"
+  },
+  "review_evidence": {
+    "geometry_overlays": [
+      {
+        "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000000.png",
+        "sha256": "0f66bc22483cb7a4c48a3fd89bc74eed52bb906a349ddc5159527e536958f610",
+        "source_index": 0
+      },
+      {
+        "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000060.png",
+        "sha256": "3400e442c16851d303c6024e2a5808f256ac52936e05700bdd9f755c734eefa2",
+        "source_index": 60
+      },
+      {
+        "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000120.png",
+        "sha256": "d1898ca380dbf342e1ba496711da545446d85703f0bed22ff56f51381081b2b7",
+        "source_index": 120
+      }
+    ],
+    "manifest_digest_sha256": "45aab082061876c34d9cdada4af80038496338a5ebfe84a366329d56fb5c2739",
+    "manifest_path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/review_manifest.json",
+    "manifest_sha256": "dd4be5beb3273130b0ed3fbe57017ce97c8b5e356e1c74e482abdf400a00e1bd",
+    "prepared_before_approval": true
+  },
+  "schema_version": 2,
+  "source_proof": {
+    "directory": "/Users/jinchoi/Code/video/artifacts/runs/synthetic-hero-offline-hardening-v2/proof",
+    "ingest_digest_sha256": "eaa7f8f786154da85f7a3cbb8fc01eb90d82f75b6849e9e46f3f4709076659b9",
+    "proof_manifest_sha256": "331e47f447cf506d12ab56690dfda1b5f909c14289a9304bfc9cd395b844dc39"
+  },
+  "visual_geometry_approval": {
+    "note": "First, middle and final frames preserve the centered package position, scale, silhouette and front-facing geometry; the exterior transformation is visibly distinct.",
+    "passed": true,
+    "review_manifest_sha256": "dd4be5beb3273130b0ed3fbe57017ce97c8b5e356e1c74e482abdf400a00e1bd",
+    "reviewed_overlay_sha256s": [
+      "0f66bc22483cb7a4c48a3fd89bc74eed52bb906a349ddc5159527e536958f610",
+      "3400e442c16851d303c6024e2a5808f256ac52936e05700bdd9f755c734eefa2",
+      "d1898ca380dbf342e1ba496711da545446d85703f0bed22ff56f51381081b2b7"
+    ],
+    "reviewed_source_indices": [
+      0,
+      60,
+      120
+    ],
+    "reviewer": "Codex visual inspection 2026-07-17"
+  }
+}

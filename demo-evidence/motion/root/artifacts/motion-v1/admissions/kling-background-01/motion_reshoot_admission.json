@@ -1,0 +1,205 @@
+{
+  "claim": "Protected core verified \u2014 canonical pre-encode frame sequence.",
+  "contract": {
+    "frame_count": 121,
+    "frame_rate": "24/1",
+    "height": 720,
+    "width": 1280
+  },
+  "digest_sha256": "8b4965dd822d1149fc31433ed5aac55749ad97dc2a2d591229ed910544111c93",
+  "generated": {
+    "capture": {
+      "attempt_id": "b3d0b0b9-285d-4a92-8cef-e8bb7849c2aa",
+      "download_json_pointer": "/video/url",
+      "endpoint": "fal-ai/kling-video/o3/standard/image-to-video",
+      "fal_url": "https://v3b.fal.media/files/b/0aa2d114/N_oqKS4E0pW2ZshfgZ8th_output.mp4",
+      "receipt": {
+        "bytes": 1327,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/attempts/b3d0b0b9-285d-4a92-8cef-e8bb7849c2aa/capture-02/capture-receipt.json",
+        "sha256": "55bd1182e1e885a13a33b924a2481d639d0ee386568e22f85bf3de3e6317961d"
+      },
+      "request_id": "019f7806-2b52-7062-89b0-98eb664401e6",
+      "source_download": {
+        "bytes": 2504588,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/attempts/b3d0b0b9-285d-4a92-8cef-e8bb7849c2aa/capture-02/background-raw.mp4",
+        "sha256": "7fbd1b3fab9777f62fd4ce44cdbda7da0aea4d4e9eff413e14a8e3d65ad3cd88"
+      }
+    },
+    "decode_provenance": {
+      "canonical_color_conversion": "BT.709 limited-range YUV to full-range RGB24",
+      "color_conversion_assumption": "Source color metadata was absent or incomplete; FrameLock explicitly assumed BT.709 matrix and limited-range YUV for canonical decoding.",
+      "color_conversion_basis": "explicit_bt709_limited_fallback",
+      "decode_argv": [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-err_detect",
+        "explode",
+        "-i",
+        "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/inputs/generated-canonical.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "scale=in_color_matrix=bt709:out_color_matrix=bt709:in_range=tv:out_range=pc:flags=accurate_rnd+full_chroma_int,format=rgb24",
+        "-fps_mode",
+        "passthrough",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-compression_level",
+        "4",
+        "-pred",
+        "mixed",
+        "-threads:v",
+        "1",
+        "-start_number",
+        "0",
+        "-f",
+        "image2",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/.generated_frames.tmp-06y_h7jz/frame_%06d.png"
+      ],
+      "decoded_frame_count": 121,
+      "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+      "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+      "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+      "frame_rate_denominator": 1,
+      "frame_rate_numerator": 24,
+      "height": 720,
+      "max_pts_residual_microseconds": 0,
+      "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+      "probe_argv": [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "V:0",
+        "-show_streams",
+        "-show_format",
+        "-show_frames",
+        "-show_entries",
+        "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+        "-of",
+        "json",
+        "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/inputs/generated-canonical.mp4"
+      ],
+      "probe_json_sha256": "ef7f58fde57ffeadee99a841e0f9b66bc46b7d943a6c3ad570e49643a3f7c48a",
+      "source_chroma_location": "left",
+      "source_codec": "h264",
+      "source_color_primaries": null,
+      "source_color_range": null,
+      "source_color_space": null,
+      "source_color_transfer": null,
+      "source_container": "mp4",
+      "source_file_sha256": "9a48ef083d205d9be00051a80cfa6a8bb2eb923e62bd692e8a7bf7ff58d18610",
+      "source_media_path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/inputs/generated-canonical.mp4",
+      "source_pixel_format": "yuv420p",
+      "time_base_denominator": 24000,
+      "time_base_numerator": 1,
+      "width": 1280
+    },
+    "fal_adoption": {
+      "status": "not_provided"
+    },
+    "normalization": {
+      "canonical_output": {
+        "bytes": 12088358,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/background/canonical-01/source-canonical.mp4",
+        "sha256": "9a48ef083d205d9be00051a80cfa6a8bb2eb923e62bd692e8a7bf7ff58d18610"
+      },
+      "geometry_mode": "scale_center_crop",
+      "manifest": {
+        "bytes": 23175,
+        "manifest_digest_sha256": "88404d0f321ee03526dc89a338b6db68740ce7771865ad01851646211dc72f60",
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/background/canonical-01/source-construction.json",
+        "sha256": "652d5c03ecb2fe3e2bb230ae7fcaa98f045e7f7b8c7ed5e61c87a5d80473e2f0"
+      },
+      "raw_source": {
+        "bytes": 2504588,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/attempts/b3d0b0b9-285d-4a92-8cef-e8bb7849c2aa/capture-02/background-raw.mp4",
+        "sha256": "7fbd1b3fab9777f62fd4ce44cdbda7da0aea4d4e9eff413e14a8e3d65ad3cd88"
+      },
+      "status": "verified_motion_source_construction"
+    },
+    "normalization_operation": "none",
+    "ordered_frame_digest_sha256": "207b1f4f3fb27c6fbe0e271f4b15236344fae046a21f509e21ae900f7da63e80",
+    "snapshot": {
+      "bytes": 12088358,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/inputs/generated-canonical.mp4",
+      "sha256": "9a48ef083d205d9be00051a80cfa6a8bb2eb923e62bd692e8a7bf7ff58d18610"
+    }
+  },
+  "kind": "framelock_motion_reshoot_admission",
+  "preview": {
+    "bytes": 1347574,
+    "label": "Preview derived from verified canonical motion frames",
+    "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/preview.mp4",
+    "sha256": "8f4cdf46a57898ea2d3bfa60605346efb1b2a3ad1cece8217fbf8bd1ac7f9850"
+  },
+  "project_root": "/Users/jinchoi/Code/video",
+  "proof": {
+    "audit": {
+      "bytes": 83341,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/proof/motion_audit.json",
+      "sha256": "47ce87c57d066c4efd9073fa0d931a81d923fe6cdc6bf4bf8d6e1225391ce8d8"
+    },
+    "audit_passed": true,
+    "motion_input_digest_sha256": "48fdb3186893b8b65309bbf613bf081eadb0ab00b46f2ec15408d0f3ba53d817",
+    "motion_inputs": {
+      "bytes": 100429,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/proof/motion_inputs.json",
+      "sha256": "572b6ab82621a24d9177684db70c3c12279eb434be43ee8ae8fcfdbfc9c69273"
+    },
+    "proof_manifest": {
+      "bytes": 117051,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/proof/proof_manifest.json",
+      "sha256": "ab49d0061c680826b6b2749e4f6a75f7b2de56f40ea4bb13794cffce39376a0a"
+    },
+    "proof_manifest_digest_sha256": "393857b70b45d42dbb3edf59e14563685594ceacdb41f68430960d1f519c5c76",
+    "root": "/Users/jinchoi/Code/video/artifacts/motion-v1/admissions/kling-background-01/proof"
+  },
+  "schema_version": 2,
+  "source": {
+    "approval": {
+      "bytes": 1539,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/source/source-approval.json",
+      "sha256": "593ce9dff730a99f0b69bab72cf45f40ca17ab3434426532671f8ccf9950c991"
+    },
+    "approved_source": {
+      "bytes": 11070859,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/source/canonical-02/source-canonical.mp4",
+      "sha256": "9882dceb76ad0b8954c92f8c8e8b9f00ea4e7812ea96a4f0307c1fa916611dc6"
+    },
+    "decode_bundle": {
+      "bytes": 45025,
+      "manifest_digest_sha256": "8380bc32f44097c560c588ca2ba4f74d57c16a9495e8f407b527640ed7c4f781",
+      "ordered_frame_digest_sha256": "2069d8c49f14ad6b2a5965e4e69382fa8ec2bad3f30430f6a85d6e68e51f686b",
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/source-decode/canonical-02/canonical_source_decode_manifest.json",
+      "sha256": "88e629bc83570bec0c356bbe06ce27002db1a76e1bad46aa56b10ba0544aeb7a"
+    }
+  },
+  "temporal_matte": {
+    "fal_adoption": {
+      "digest_sha256": "c28fff9a244449068176c3ff857661646ee2778a695a06e0a8c3187647500c7a",
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/adoptions/temporal-matte-veed-vp9-02-adoption.json",
+      "sha256": "69c43617347c0373c9948ecf53f508ee9a9a80b2837e7d970c996a884e3fd6c7",
+      "status": "verified"
+    },
+    "manifest": {
+      "bytes": 191043,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/temporal_matte_manifest.json",
+      "sha256": "89ff5e6c753f7f733c85f7f9921ce085275f21bc5b43c34faa5753775d386ca6"
+    },
+    "manifest_digest_sha256": "f39d99ff9462cf730ef1cee1c28c7dc7ec250ac5d376c3d35f308fa584817d18"
+  },
+  "verdict": "admitted"
+}

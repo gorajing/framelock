@@ -1,0 +1,261 @@
+{
+  "attempt": {
+    "cap": 3,
+    "index": 2
+  },
+  "automatic_checks_passed": true,
+  "checks": [
+    {
+      "actual": "mp4",
+      "expected": "mp4",
+      "name": "container",
+      "passed": true
+    },
+    {
+      "actual": "16/9",
+      "expected": "16/9",
+      "name": "display_aspect_ratio",
+      "passed": true
+    },
+    {
+      "actual": "decoded=121,pts=121",
+      "expected": "121",
+      "name": "frame_count",
+      "passed": true
+    },
+    {
+      "actual": "24/1",
+      "expected": "24/1",
+      "name": "frame_rate",
+      "passed": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "rotation",
+      "passed": true
+    },
+    {
+      "actual": "True",
+      "expected": "true",
+      "name": "timestamps_strictly_increasing",
+      "passed": true
+    },
+    {
+      "actual": "0.000000000",
+      "expected": "<=0.001s",
+      "name": "timestamp_residual",
+      "passed": true
+    },
+    {
+      "actual": "5.041667000",
+      "expected": "5.041666667s +/-0.041666667s",
+      "name": "duration",
+      "passed": true
+    }
+  ],
+  "evaluated_at": "2026-07-18T01:47:33.417109+00:00",
+  "failed_checks": [],
+  "inspection_decode": {
+    "argv": [
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/.assessment.tmp-3xc6_nm6/inspection/raw_000000.png"
+      ],
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,60)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/.assessment.tmp-3xc6_nm6/inspection/raw_000060.png"
+      ],
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,120)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/.assessment.tmp-3xc6_nm6/inspection/raw_000120.png"
+      ]
+    ],
+    "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+    "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "inspection_frames": [
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/inspection/raw_000000.png",
+      "sha256": "185997569c155253555fdcdb84e7ae9c39269fa9419446d2e2c750b6742bcaf7",
+      "source_index": 0
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/inspection/raw_000060.png",
+      "sha256": "9f3a0e4752a21be33b43f246630b97ade467331607b904ee72d1de4106a887dd",
+      "source_index": 60
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/inspection/raw_000120.png",
+      "sha256": "e307fdd89fa2f67a54de1ef32f31122194d8fc1db41577ea798ecebfc5703744",
+      "source_index": 120
+    }
+  ],
+  "job_provenance": {
+    "createdAt": "2026-07-18T01:43:15.371Z",
+    "fal": {
+      "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+      "generationDigest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec",
+      "modelOutput": {
+        "artifactId": "sha256:6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+        "contentType": "video/mp4",
+        "sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef"
+      },
+      "requestId": "019f72e4-5e1e-7143-bf91-e3aac20328da"
+    },
+    "generation": {
+      "digest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec",
+      "editMaskSha256": "ee375951c0fe4233ad442d7b18a23d770b63a0f195bb8fac1bae769d03b7b2f3",
+      "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+      "parameters": {
+        "keep_audio": false,
+        "shot_type": "customize"
+      },
+      "prompt": "Transform @Video1 into a cinematic locked-off product commercial in a rain-soaked neon laboratory at night. Animate cyan and magenta light sweeps, drifting mist and rain around the centered package. Keep the camera fixed. Preserve the package silhouette, position, scale and front-facing orientation. Do not crop, letterbox, stretch, zoom or change aspect ratio.",
+      "sourceSha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d"
+    },
+    "id": "synthetic-hero-kling-o3-001",
+    "state": "generated",
+    "updatedAt": "2026-07-18T01:47:23.057Z"
+  },
+  "media": {
+    "codec": "h264",
+    "color": {
+      "chroma_location": "left",
+      "primaries": null,
+      "range": null,
+      "space": null,
+      "transfer": null
+    },
+    "container": "mp4",
+    "declared_duration_seconds": 5.041667,
+    "display_aspect_ratio": "16/9",
+    "effective_sample_aspect_ratio": "1/1",
+    "file_size_bytes": 3810247,
+    "frame_count": 121,
+    "frame_rate": "24/1",
+    "height": 720,
+    "max_timestamp_residual_microseconds": 0,
+    "measured_duration_seconds": 5.041666666666667,
+    "pixel_format": "yuv420p",
+    "presentation_timestamp_count": 121,
+    "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+    "reported_sample_aspect_ratio": null,
+    "rotation_degrees": 0,
+    "sample_aspect_ratio_inferred": true,
+    "time_base": "1/12288",
+    "width": 1280
+  },
+  "model_output": {
+    "bytes": 3810247,
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+    "sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef"
+  },
+  "normalization_applied": false,
+  "normalization_plan": "none",
+  "pricing": {
+    "billing_unit": "seconds",
+    "estimated_cost_usd": "0.705833",
+    "estimated_units": "5.041666667",
+    "source": "authenticated_fal_pricing_and_estimate",
+    "unit_price_usd": "0.14"
+  },
+  "probe": {
+    "argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "V:0",
+      "-show_streams",
+      "-show_format",
+      "-show_frames",
+      "-show_entries",
+      "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+      "-of",
+      "json",
+      "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4"
+    ],
+    "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+    "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/ffprobe.raw.json",
+    "raw_json_sha256": "147eed32930ab9a1be4504cc3a5204acf1eff3d441dff3b059bed9c3da8bf969"
+  },
+  "rule_version": "framelock-comparability-p0-v1",
+  "schema_version": 1,
+  "verdict": "comparable_pending_visual_approval",
+  "visual_geometry_approval": "pending_human_review",
+  "visual_geometry_note": "Review source indices 0, 60 and 120 with the protection overlay."
+}

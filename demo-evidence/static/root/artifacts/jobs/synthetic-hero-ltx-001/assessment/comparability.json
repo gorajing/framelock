@@ -1,0 +1,272 @@
+{
+  "attempt": {
+    "cap": 3,
+    "index": 1
+  },
+  "automatic_checks_passed": false,
+  "checks": [
+    {
+      "actual": "mp4",
+      "expected": "mp4",
+      "name": "container",
+      "passed": true
+    },
+    {
+      "actual": "5/3",
+      "expected": "16/9",
+      "name": "display_aspect_ratio",
+      "passed": false
+    },
+    {
+      "actual": "decoded=121,pts=121",
+      "expected": "121",
+      "name": "frame_count",
+      "passed": true
+    },
+    {
+      "actual": "24/1",
+      "expected": "24/1",
+      "name": "frame_rate",
+      "passed": true
+    },
+    {
+      "actual": "0",
+      "expected": "0",
+      "name": "rotation",
+      "passed": true
+    },
+    {
+      "actual": "True",
+      "expected": "true",
+      "name": "timestamps_strictly_increasing",
+      "passed": true
+    },
+    {
+      "actual": "0.000000000",
+      "expected": "<=0.001s",
+      "name": "timestamp_residual",
+      "passed": true
+    },
+    {
+      "actual": "5.041667000",
+      "expected": "5.041666667s +/-0.041666667s",
+      "name": "duration",
+      "passed": true
+    }
+  ],
+  "evaluated_at": "2026-07-18T01:41:48.803138+00:00",
+  "failed_checks": [
+    "display_aspect_ratio"
+  ],
+  "inspection_decode": {
+    "argv": [
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-ltx-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/.assessment.tmp-c68l_drn/inspection/raw_000000.png"
+      ],
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-ltx-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,60)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/.assessment.tmp-c68l_drn/inspection/raw_000060.png"
+      ],
+      [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-loglevel",
+        "error",
+        "-xerror",
+        "-noautorotate",
+        "-i",
+        "artifacts/jobs/synthetic-hero-ltx-001/model-output.mp4",
+        "-map",
+        "0:V:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,120)",
+        "-frames:v",
+        "1",
+        "-c:v",
+        "png",
+        "-pix_fmt",
+        "rgb24",
+        "-threads:v",
+        "1",
+        "-n",
+        "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/.assessment.tmp-c68l_drn/inspection/raw_000120.png"
+      ]
+    ],
+    "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+    "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "inspection_frames": [
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/assessment/inspection/raw_000000.png",
+      "sha256": "0c0c737250db390448b98e494dcedaf255f4755bd3ec373d87e8dab759977d83",
+      "source_index": 0
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/assessment/inspection/raw_000060.png",
+      "sha256": "d830f0a3bb0e27222fde38aee87adb12666a8621c1869624538b056efee25d69",
+      "source_index": 60
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/assessment/inspection/raw_000120.png",
+      "sha256": "e8df5521453f019f5f956d03909600fa46ed74fd5031cc9efeddba46d886229d",
+      "source_index": 120
+    }
+  ],
+  "job_provenance": {
+    "createdAt": "2026-07-18T01:22:07.620Z",
+    "fal": {
+      "endpoint": "fal-ai/ltx-2.3-quality/inpaint",
+      "generationDigest": "4263151e016a0a67b439d3ed4e2a7163c3bde589cbe7357610f9c91576310c38",
+      "modelOutput": {
+        "artifactId": "sha256:cfa9451141dda799add735bb267945c21f86d534e89e7b384ff96aef87b5cb31",
+        "contentType": "video/mp4",
+        "sha256": "cfa9451141dda799add735bb267945c21f86d534e89e7b384ff96aef87b5cb31"
+      },
+      "requestId": "019f72d1-0702-71b1-9832-e618f81455cb"
+    },
+    "generation": {
+      "digest": "4263151e016a0a67b439d3ed4e2a7163c3bde589cbe7357610f9c91576310c38",
+      "editMaskSha256": "4ab6466261f99b2eecd7a1de5276509e21a87fedbdde639a5c890873dda7e785",
+      "endpoint": "fal-ai/ltx-2.3-quality/inpaint",
+      "parameters": {
+        "enable_prompt_expansion": false,
+        "enable_safety_checker": true,
+        "frames_per_second": 24,
+        "generate_audio": false,
+        "guidance_scale": 1,
+        "num_frames": 121,
+        "num_inference_steps": 15,
+        "seed": 240121,
+        "video_quality": "high",
+        "video_strength": 1,
+        "video_write_mode": "balanced"
+      },
+      "prompt": "A cinematic locked-off product commercial in a rain-soaked neon laboratory at night. Animated cyan and magenta light sweeps, drifting mist and rain move around the central product. Keep the camera fixed and preserve the centered package silhouette, composition and scale.",
+      "sourceSha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d"
+    },
+    "id": "synthetic-hero-ltx-001",
+    "state": "generated",
+    "updatedAt": "2026-07-18T01:23:45.811Z"
+  },
+  "media": {
+    "codec": "h264",
+    "color": {
+      "chroma_location": "left",
+      "primaries": null,
+      "range": null,
+      "space": null,
+      "transfer": null
+    },
+    "container": "mp4",
+    "declared_duration_seconds": 5.041667,
+    "display_aspect_ratio": "5/3",
+    "effective_sample_aspect_ratio": "1/1",
+    "file_size_bytes": 642701,
+    "frame_count": 121,
+    "frame_rate": "24/1",
+    "height": 768,
+    "max_timestamp_residual_microseconds": 0,
+    "measured_duration_seconds": 5.041666666666667,
+    "pixel_format": "yuv420p",
+    "presentation_timestamp_count": 121,
+    "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+    "reported_sample_aspect_ratio": null,
+    "rotation_degrees": 0,
+    "sample_aspect_ratio_inferred": true,
+    "time_base": "1/12288",
+    "width": 1280
+  },
+  "model_output": {
+    "bytes": 642701,
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/model-output.mp4",
+    "sha256": "cfa9451141dda799add735bb267945c21f86d534e89e7b384ff96aef87b5cb31"
+  },
+  "normalization_applied": false,
+  "normalization_plan": "not_permitted",
+  "pricing": {
+    "billing_unit": "megapixels",
+    "estimated_cost_usd": "0.268468992",
+    "estimated_units": "111.5136",
+    "source": "authenticated_fal_pricing",
+    "unit_price_usd": "0.0024075"
+  },
+  "probe": {
+    "argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "V:0",
+      "-show_streams",
+      "-show_format",
+      "-show_frames",
+      "-show_entries",
+      "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+      "-of",
+      "json",
+      "artifacts/jobs/synthetic-hero-ltx-001/model-output.mp4"
+    ],
+    "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+    "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-ltx-001/assessment/ffprobe.raw.json",
+    "raw_json_sha256": "bcdd901444f54c6577b725fe9dab15321262aee3ba156db89ed3ef83daea2654"
+  },
+  "rule_version": "framelock-comparability-p0-v1",
+  "schema_version": 1,
+  "verdict": "not_comparable",
+  "visual_geometry_approval": "not_reached_automatic_gate_failed",
+  "visual_geometry_note": "Cropping and aspect-distorting scaling are outside the frozen contract."
+}

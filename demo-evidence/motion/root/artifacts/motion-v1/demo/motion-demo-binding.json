@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "kind": "framelock_motion_demo_binding",
+  "digest_sha256": "64131efb4ea5c8938580278bd04846dcf7de1ff29d8165090ec6dcb8ad622391",
+  "admission": {
+    "path": "artifacts/motion-v1/admissions/kling-background-01/motion_reshoot_admission.json",
+    "sha256": "16ec56b5a187b5c91b473c0be9697858828f492b78dbb3b50f0a22f3d459d8e8",
+    "bytes": 9451
+  },
+  "audit": {
+    "path": "artifacts/motion-v1/admissions/kling-background-01/proof/motion_audit.json",
+    "sha256": "47ce87c57d066c4efd9073fa0d931a81d923fe6cdc6bf4bf8d6e1225391ce8d8",
+    "bytes": 83341
+  },
+  "proof_manifest": {
+    "path": "artifacts/motion-v1/admissions/kling-background-01/proof/proof_manifest.json",
+    "sha256": "ab49d0061c680826b6b2749e4f6a75f7b2de56f40ea4bb13794cffce39376a0a",
+    "bytes": 117051
+  },
+  "temporal_matte": {
+    "path": "artifacts/motion-v1/matte/veed-vp9-02/temporal_matte_manifest.json",
+    "sha256": "89ff5e6c753f7f733c85f7f9921ce085275f21bc5b43c34faa5753775d386ca6",
+    "bytes": 191043
+  },
+  "negative_control": {
+    "summary": {
+      "path": "artifacts/motion-v1/negative-controls/kling-background-02/corruption_summary.json",
+      "sha256": "0f0369863fc1d4336cf63efebd93190f9bcd5815d1b0c29914add80dd56f66ad",
+      "bytes": 1200
+    },
+    "audit": {
+      "path": "artifacts/motion-v1/negative-controls/kling-background-02/corruption_audit.json",
+      "sha256": "d77c6cb1a4c2cd6b34931254d479ce8d7156974f83ba300e7abc110182be369a",
+      "bytes": 203296
+    },
+    "manifest": {
+      "path": "artifacts/motion-v1/negative-controls/kling-background-02/corruption_manifest.json",
+      "sha256": "a98a6bd6876456cd784127f61367449cc904c269d41d313113f8bed5efc5a3f6",
+      "bytes": 117045
+    },
+    "corrupted_frame": {
+      "path": "artifacts/motion-v1/negative-controls/kling-background-02/corrupted_composite_000060.png",
+      "sha256": "a70b5deb2adfbb4e54a38e2b063dabf017bbe7540109388619d551015093b826",
+      "bytes": 989258
+    }
+  },
+  "mask_preview_provenance": {
+    "path": "artifacts/motion-v1/demo-media/mask-preview-v1/mask-preview-manifest.json",
+    "sha256": "9361fddbb7132a6ae35d0091dd012ee0d18befc6b5ce946a280b15e93d5eb5ae",
+    "bytes": 44670
+  },
+  "media": {
+    "source": {
+      "url": "/demo/motion/source.mp4",
+      "sha256": "9882dceb76ad0b8954c92f8c8e8b9f00ea4e7812ea96a4f0307c1fa916611dc6",
+      "bytes": 11070859
+    },
+    "generated_world": {
+      "url": "/demo/motion/generated-world.mp4",
+      "sha256": "9a48ef083d205d9be00051a80cfa6a8bb2eb923e62bd692e8a7bf7ff58d18610",
+      "bytes": 12088358
+    },
+    "mask": {
+      "url": "/demo/motion/mask.mp4",
+      "sha256": "5ff2ed027f581555e9cae7c775348ea761ae509e54617f73b980e5011e634cd7",
+      "bytes": 218775
+    },
+    "verified": {
+      "url": "/demo/motion/verified.mp4",
+      "sha256": "8f4cdf46a57898ea2d3bfa60605346efb1b2a3ad1cece8217fbf8bd1ac7f9850",
+      "bytes": 1347574
+    }
+  }
+}

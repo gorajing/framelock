@@ -1,0 +1,19 @@
+{
+  "audit_path": "/Users/jinchoi/Code/video/artifacts/motion-v1/negative-controls/kling-background-02/corruption_audit.json",
+  "audit_sha256": "d77c6cb1a4c2cd6b34931254d479ce8d7156974f83ba300e7abc110182be369a",
+  "canonical_artifacts_mutated": false,
+  "changed_core_channel_samples": 1,
+  "changed_core_pixels": 1,
+  "corrupted_channel": 1,
+  "corrupted_frame_file_sha256": "a70b5deb2adfbb4e54a38e2b063dabf017bbe7540109388619d551015093b826",
+  "corrupted_frame_index": 60,
+  "corrupted_frame_output_core_sha256": "aaa19593c670ff9c9df516271549198d3d151c917de488bef86f97c007d451df",
+  "corrupted_frame_path": "/Users/jinchoi/Code/video/artifacts/motion-v1/negative-controls/kling-background-02/corrupted_composite_000060.png",
+  "corrupted_frame_rgb_sha256": "711df5deb5c0796d855a2fa7691e046e5f54aa9833704707abc1d4120e42a89e",
+  "fixture": "one_channel_one_pixel_protected_core_corruption",
+  "manifest_path": "/Users/jinchoi/Code/video/artifacts/motion-v1/negative-controls/kling-background-02/corruption_manifest.json",
+  "manifest_sha256": "a98a6bd6876456cd784127f61367449cc904c269d41d313113f8bed5efc5a3f6",
+  "passed": false,
+  "schema_version": 2,
+  "worst_maximum_absolute_channel_delta": 1
+}

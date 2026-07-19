@@ -1,0 +1,43 @@
+{
+  "id": "synthetic-hero-ltx-001",
+  "state": "not_comparable",
+  "createdAt": "2026-07-18T01:22:07.620Z",
+  "updatedAt": "2026-07-18T02:57:02.747Z",
+  "generation": {
+    "sourceSha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d",
+    "editMaskSha256": "4ab6466261f99b2eecd7a1de5276509e21a87fedbdde639a5c890873dda7e785",
+    "prompt": "A cinematic locked-off product commercial in a rain-soaked neon laboratory at night. Animated cyan and magenta light sweeps, drifting mist and rain move around the central product. Keep the camera fixed and preserve the centered package silhouette, composition and scale.",
+    "endpoint": "fal-ai/ltx-2.3-quality/inpaint",
+    "parameters": {
+      "video_strength": 1,
+      "num_frames": 121,
+      "frames_per_second": 24,
+      "num_inference_steps": 15,
+      "guidance_scale": 1,
+      "generate_audio": false,
+      "enable_prompt_expansion": false,
+      "enable_safety_checker": true,
+      "video_quality": "high",
+      "video_write_mode": "balanced",
+      "seed": 240121
+    },
+    "digest": "4263151e016a0a67b439d3ed4e2a7163c3bde589cbe7357610f9c91576310c38"
+  },
+  "fal": {
+    "generationDigest": "4263151e016a0a67b439d3ed4e2a7163c3bde589cbe7357610f9c91576310c38",
+    "endpoint": "fal-ai/ltx-2.3-quality/inpaint",
+    "requestId": "019f72d1-0702-71b1-9832-e618f81455cb",
+    "sourceUploadUrl": "https://v3b.fal.media/files/b/0aa2aeec/6NMRY_Ew9yPMiP_28yi3b_framelock-hero.mp4",
+    "maskUploadUrl": "https://v3b.fal.media/files/b/0aa2aeec/PuSBUUdgTk748u4NhEZel_framelock-edit-mask.mp4",
+    "modelOutput": {
+      "artifactId": "sha256:cfa9451141dda799add735bb267945c21f86d534e89e7b384ff96aef87b5cb31",
+      "sha256": "cfa9451141dda799add735bb267945c21f86d534e89e7b384ff96aef87b5cb31",
+      "url": "https://v3b.fal.media/files/b/0aa2aef5/pEI2oHuevQP-7if9_VUon_XqlIwrq3.mp4",
+      "contentType": "video/mp4"
+    }
+  },
+  "assessment": {
+    "verdict": "not_comparable",
+    "sha256": "131720e0216bb61c8e7b0cf39167ec7cd050a6a89d40f4cf291f935b9d878e7e"
+  }
+}

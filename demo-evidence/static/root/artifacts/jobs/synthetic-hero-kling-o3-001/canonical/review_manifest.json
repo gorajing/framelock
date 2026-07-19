@@ -1,0 +1,862 @@
+{
+  "digest_sha256": "45aab082061876c34d9cdada4af80038496338a5ebfe84a366329d56fb5c2739",
+  "generated_decode_provenance": {
+    "canonical_color_conversion": "BT.709 limited-range YUV to full-range RGB24",
+    "color_conversion_assumption": "Source color metadata was absent or incomplete; FrameLock explicitly assumed BT.709 matrix and limited-range YUV for canonical decoding.",
+    "color_conversion_basis": "explicit_bt709_limited_fallback",
+    "decode_argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-loglevel",
+      "error",
+      "-xerror",
+      "-noautorotate",
+      "-err_detect",
+      "explode",
+      "-i",
+      "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+      "-map",
+      "0:V:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-vf",
+      "scale=in_color_matrix=bt709:out_color_matrix=bt709:in_range=tv:out_range=pc:flags=accurate_rnd+full_chroma_int,format=rgb24",
+      "-fps_mode",
+      "passthrough",
+      "-c:v",
+      "png",
+      "-pix_fmt",
+      "rgb24",
+      "-compression_level",
+      "4",
+      "-pred",
+      "mixed",
+      "-threads:v",
+      "1",
+      "-start_number",
+      "0",
+      "-f",
+      "image2",
+      "-n",
+      "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/.generated_frames.tmp-udkealai/frame_%06d.png"
+    ],
+    "decoded_frame_count": 121,
+    "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+    "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+    "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+    "frame_rate_denominator": 1,
+    "frame_rate_numerator": 24,
+    "height": 720,
+    "max_pts_residual_microseconds": 0,
+    "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+    "probe_argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "-v",
+      "error",
+      "-select_streams",
+      "V:0",
+      "-show_streams",
+      "-show_format",
+      "-show_frames",
+      "-show_entries",
+      "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+      "-of",
+      "json",
+      "artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4"
+    ],
+    "probe_json_sha256": "147eed32930ab9a1be4504cc3a5204acf1eff3d441dff3b059bed9c3da8bf969",
+    "source_chroma_location": "left",
+    "source_codec": "h264",
+    "source_color_primaries": null,
+    "source_color_range": null,
+    "source_color_space": null,
+    "source_color_transfer": null,
+    "source_container": "mp4",
+    "source_file_sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+    "source_media_path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/model-output.mp4",
+    "source_pixel_format": "yuv420p",
+    "time_base_denominator": 12288,
+    "time_base_numerator": 1,
+    "width": 1280
+  },
+  "generated_frames": [
+    {
+      "file_sha256": "595ba3ec8f8ce4f190a925d1d4207ba8ee3aab48fb7203f73cdbfb0c835837f0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000000.png",
+      "rgb_sha256": "5cdb99aeec058cda44599cf5c7f656e721d5645632aee1aa12b32555fe01f501",
+      "source_index": 0
+    },
+    {
+      "file_sha256": "f1db8bcc518c8a29eb9d9bf5a7a324186ac00c5440043c4f190ba0f5d4f8298a",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000001.png",
+      "rgb_sha256": "f46838376cbd12b6b0d7b7b59a5d9976f35d256fd7e2c1acfbe800449eceba3a",
+      "source_index": 1
+    },
+    {
+      "file_sha256": "4a815146e5387b8a79658e610a2aafcad99a9fd9703b54ea729d11205e0db5e7",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000002.png",
+      "rgb_sha256": "d22dd2d33c5b6807658ffb9717dd92369bd5a0f84ca77b2666d10547bf665d59",
+      "source_index": 2
+    },
+    {
+      "file_sha256": "7e1aff77331d51d0543c198b2e7e962f52c9dce1f86377416c9ad1f336501738",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000003.png",
+      "rgb_sha256": "f32158a5ff4db7980534b853ce3bfaaef387816aa5e361feffe692290e29c6ea",
+      "source_index": 3
+    },
+    {
+      "file_sha256": "4bd129a68bf4f2c35ab7231588905aecb90ea1c80e981be5c1530f99425f887c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000004.png",
+      "rgb_sha256": "358b8348b7f70d8a4a405143ce3bd84bc3b56f0d9dbf3b823ed7e00fb7f3a3a2",
+      "source_index": 4
+    },
+    {
+      "file_sha256": "2c73fb6f03ad0958fec56621047665ab45e0e14603c7b7cd163bcd1bd95595d0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000005.png",
+      "rgb_sha256": "17a6befc6ba35a66e9edb7d8d2cc16c38a556f64bee5d869f9f14b04d31c7341",
+      "source_index": 5
+    },
+    {
+      "file_sha256": "1c46af412e9cdd99218f951fc8f2c4eee5655bba63b3252f5d8d7d7e73fcfda9",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000006.png",
+      "rgb_sha256": "4f5b751d4b9794a016119d5abf4d90306a93cdce6274657ef3cf7a0568ceeae0",
+      "source_index": 6
+    },
+    {
+      "file_sha256": "4c017ab04e4177e844b523bfa09a0ba47caf135b89d62058b3d6b502b3c9198d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000007.png",
+      "rgb_sha256": "75a8bdf0cf79fc4ea15658c6f9c62d731af40a5b8d9565cf2ff90596d49a75c9",
+      "source_index": 7
+    },
+    {
+      "file_sha256": "2c894b76f995be78b9690be2313b238c92d80f583073ecf196475332608b8b73",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000008.png",
+      "rgb_sha256": "b968a8d3fc29eff2782c795a04f6a329e3c03c821a43a76a06a6bec59fbca279",
+      "source_index": 8
+    },
+    {
+      "file_sha256": "01ad1049ecd59487fd0dcafe2881c4d62015d6a3ef419c4f2eeb2936f032ab54",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000009.png",
+      "rgb_sha256": "03e097c5860aae61abf242d22f08a3fbb8287f8fd10600bebb550a48ee21b728",
+      "source_index": 9
+    },
+    {
+      "file_sha256": "eb23b3724910e6b6194b08fb94ba955515e0cff8d5407776525a2b887ab126ba",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000010.png",
+      "rgb_sha256": "84d3e7c60e6851ce2b0c8ce2633ce640bdb0764e7a814b2001b0d6a95545313f",
+      "source_index": 10
+    },
+    {
+      "file_sha256": "077e5b94513a772b7a25407f6da14186a0358367830b0aea96385a0221ca05a0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000011.png",
+      "rgb_sha256": "783f00944eb0967de74c2f6d5135b55680121bec4503e27c7bc820ba7697c33b",
+      "source_index": 11
+    },
+    {
+      "file_sha256": "d05441b206969d8f587c1e0a5057ab87dbd1675afb8dc3ec8a01cc2b836f2482",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000012.png",
+      "rgb_sha256": "d34614dc28c29a479ae16aaa73b4efe4f1bb4290809e1212e54e4d0fc2974dee",
+      "source_index": 12
+    },
+    {
+      "file_sha256": "7e42b3b50015cf5654c8634bd97f59e7df8daee6c479b0d441593e20bcc21d5f",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000013.png",
+      "rgb_sha256": "860e434d6bb149ce16b1ff24b3829e161d0d5e1fe26a7c5b6b27bfdb24881123",
+      "source_index": 13
+    },
+    {
+      "file_sha256": "40e9a1c7e609b7a2f896e91e9827d9638fabd6199c8dbd7d68e95cf6f974afb5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000014.png",
+      "rgb_sha256": "fb7a5633d96984a98b01148cc103522a0f9de9086e277b6146f595287143b94a",
+      "source_index": 14
+    },
+    {
+      "file_sha256": "09be3770235445683e4c770a3daa4f1b0fe93865689e4019d3d9ed8286f5388a",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000015.png",
+      "rgb_sha256": "2ee943cacbe6c631b1153a38094e71e45cd4fd681400b65ed895372f96aae48e",
+      "source_index": 15
+    },
+    {
+      "file_sha256": "1e5805d72a0a4c946492048d0f7541a29d397aa543f02441da9d12880e7f87b4",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000016.png",
+      "rgb_sha256": "cfa820dfe80c2b0295ae4d896e45c12318dd7d831529f28785c25fef0345a395",
+      "source_index": 16
+    },
+    {
+      "file_sha256": "00ee3d8a735f2f471367ecc9d549bdc1fe4a1bcc6a9899e3d7d87293433e174c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000017.png",
+      "rgb_sha256": "dd46e9ededc1358d9329c631eef1156d0ba08660dca51768fd0f0b94fcd6f907",
+      "source_index": 17
+    },
+    {
+      "file_sha256": "b9509f6540f800aec31f57984593d316075b6225b23750fde12d49f9edbaf6bc",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000018.png",
+      "rgb_sha256": "2a9cafc4a689eb0af2e5967a460a24d0a62c01a855263fc330ead2b6f21f3474",
+      "source_index": 18
+    },
+    {
+      "file_sha256": "cb0263d747df9f0f35e1c94c40b41a9a8b631e83e5e824fa370ff06f78a05536",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000019.png",
+      "rgb_sha256": "6679fe7ad039244a9dd6cd0dbb1c8809c88f612c4c9a34f5165a4bc2f32b0b30",
+      "source_index": 19
+    },
+    {
+      "file_sha256": "2d8b5381d1d1134c416e49f43d5fb9e5551a5e70f83c3cbba9452df6130ec7d4",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000020.png",
+      "rgb_sha256": "c2bf1cc51700c8eef00c808daccc1aab2fa7a9eed949c82c985ee072190bbbaa",
+      "source_index": 20
+    },
+    {
+      "file_sha256": "e5ec4d802f2c6d084a729b01050055893dfcd27c1dd580f098c8524643dca60c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000021.png",
+      "rgb_sha256": "6b0ede198ef39f6400d2f77f3b500a30ebb84997d924e548c9546b4428e99fc2",
+      "source_index": 21
+    },
+    {
+      "file_sha256": "aff0419046c3b57c982d75c908c9d845a7245354bd621b5d26b3afb8d0ef26f2",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000022.png",
+      "rgb_sha256": "7f52784973f771465cd96d39ffc58429fc984ea31c632cac21b02b6e99affbe9",
+      "source_index": 22
+    },
+    {
+      "file_sha256": "ab5b08279ab1f6d0f71f869fa4df048b907b68d07a18a90c1f4f87f7747eb280",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000023.png",
+      "rgb_sha256": "bac7490dc262cb3624945e1e1881c20dd99f56be762e16a4a3e8ce58eb954908",
+      "source_index": 23
+    },
+    {
+      "file_sha256": "c7ce164d62ad9fe1482d373268b9b9db1a61a5ae8b90ecfd0553c5b0234658bf",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000024.png",
+      "rgb_sha256": "1ab03f859f08c8a8dc58fdab2cd94048c3048510ab56c24bbdf581beb59f7373",
+      "source_index": 24
+    },
+    {
+      "file_sha256": "efd2405ca4165f47031078c536f84926317b029150f701b22b08550308a8ba32",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000025.png",
+      "rgb_sha256": "14aaa694a65115788f0c3430c7af6e3d7b3c325256af89a505af6ed163f65d9f",
+      "source_index": 25
+    },
+    {
+      "file_sha256": "1f03b978552cc98bfadd65456632ede029de5889c33d96bf4f367fd19639e020",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000026.png",
+      "rgb_sha256": "228782fa2f99aa739aab9bece790dca4a44216931589d86be73e025fbc94ec47",
+      "source_index": 26
+    },
+    {
+      "file_sha256": "50b37161f76dc6efb455f0c8df3c0946bc5e5faef98d78e93e052393279963c9",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000027.png",
+      "rgb_sha256": "faee13ca381139b92723c2331d127cbacb7146784977a0ba17a206f30b42d020",
+      "source_index": 27
+    },
+    {
+      "file_sha256": "3190b7688854cf23b68a075acdd88c09e1ae49d52a37795ceacb0417d73928ea",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000028.png",
+      "rgb_sha256": "b1322003e9c2a38707c278d19bd62106137d2b0dfa7de4070219df3b3afe1e4c",
+      "source_index": 28
+    },
+    {
+      "file_sha256": "b8df45f5818ea9559352742816a8222d866409feb3ea81ca8e2bf80da4e19945",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000029.png",
+      "rgb_sha256": "41d7cbf0658d2e35d4e54ba19c89d1d69e64919e80e28e80f148e24a53a36262",
+      "source_index": 29
+    },
+    {
+      "file_sha256": "d9211648b5260e5dbb600209cff062d80d08fed3de1320fc897ec876907f1f84",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000030.png",
+      "rgb_sha256": "6cccaf655c590bff354388b6c60797d50d07f9d336247f5d8d459a3437edc0b5",
+      "source_index": 30
+    },
+    {
+      "file_sha256": "012503d895916513fdadbfb6872dee6e3c8ca3b4ddc909c771605b1aec1ab6e6",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000031.png",
+      "rgb_sha256": "ac7ba23dbd0c85112ff823f17c3e43cd96a190b8b2fdcc1196d8ccb600f84061",
+      "source_index": 31
+    },
+    {
+      "file_sha256": "b6902e7ff126ced5c82f2042d719431c281b2a64e676e2b9287630597d82df30",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000032.png",
+      "rgb_sha256": "023e53d75390a1db4d8a3452413a2535aac0e2ce08c5d5bbbcfcbd91b22f367e",
+      "source_index": 32
+    },
+    {
+      "file_sha256": "15253800c972bbe520c746e60862c362a09799c8a971ee99b6b3e867b1da3489",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000033.png",
+      "rgb_sha256": "b6cb4ee1283415b33f8ef2e9e7a28a6e238333c2726e93de7ffca06aad4dfb60",
+      "source_index": 33
+    },
+    {
+      "file_sha256": "6fa850568e9eaa5f918cc95eb7973311e7b2d90d072a21b3716b48a4114889f3",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000034.png",
+      "rgb_sha256": "cc1c088640c5ced5a580d0dbaa888026751f2cc584a43ce7a574f25d28c0a4bb",
+      "source_index": 34
+    },
+    {
+      "file_sha256": "729078c816166acffa2a8e19aa6e0923dcadf7540f3a72a09358ef051f147c1d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000035.png",
+      "rgb_sha256": "2ff670cd2bd3374c29d19abbbdd806d9782772d2db385f5d6b4854d398303eba",
+      "source_index": 35
+    },
+    {
+      "file_sha256": "fbc08549fe07595066fefb4b78db4539f2604202f1e424f8f3d94be18aa42ce2",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000036.png",
+      "rgb_sha256": "be1576b744da4873768b5a6a2d3644d2d0ad71c9e5f92779faceabe451c13edb",
+      "source_index": 36
+    },
+    {
+      "file_sha256": "3a24fd11f9f824f32e1c29c458cabbd07c051c519ea463abd4e0e7d65827e48d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000037.png",
+      "rgb_sha256": "8d813a7a30bb2af4ba96415dadc6e6bb00ebbc86f5e7dcacceb2bd6a0e1229fe",
+      "source_index": 37
+    },
+    {
+      "file_sha256": "21431e04ae124316da4d9b7e1e2d4daa2166b9f16e8db9afa1fad8cd10363850",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000038.png",
+      "rgb_sha256": "8bcec40ddb312db598a0bff41445c1f4a0501e4dd1ab92e8675041d414adbdf3",
+      "source_index": 38
+    },
+    {
+      "file_sha256": "8efcadc1299b240e7293a1fa818ad577fa40aef44f71fbf07bda498b40091b5d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000039.png",
+      "rgb_sha256": "18c52325e40a71a0e5d311d75b2ebba767063a2d2f569fc545feb55b5b8fe391",
+      "source_index": 39
+    },
+    {
+      "file_sha256": "21b705a155935cf0222d85ba4aaa39aa605c707b4e4f3956f8247c1154900754",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000040.png",
+      "rgb_sha256": "eb38d4a953f0953b0744173eee1c8c24e78ce984e466c3fd17abb0915bce0321",
+      "source_index": 40
+    },
+    {
+      "file_sha256": "c14e632f55a0eb37f98a6e1a3433e891993ef2fc29afb1166c89214ef6805c9a",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000041.png",
+      "rgb_sha256": "88d82b129b66e5ef7e0c6e9db3704bed2f054c73a2f857fcdf6d4eefafe77478",
+      "source_index": 41
+    },
+    {
+      "file_sha256": "47066ef316a820189c188d2a5775bd85260ebbdcecceb1ffffb0cf5d4d108bad",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000042.png",
+      "rgb_sha256": "c9e89046aa7dc4164babe3df5c368a4c748f10a6518ec7f33e319fdf72b69e83",
+      "source_index": 42
+    },
+    {
+      "file_sha256": "c1d64b955bb7d410ab23865d811df1c7f611b8c9a70dd5ae3bb6a1fbf7afee17",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000043.png",
+      "rgb_sha256": "ed213515410b3585e3b23b6fed806cba3eba3d63e917db5cd8f311c7ed06b780",
+      "source_index": 43
+    },
+    {
+      "file_sha256": "447eb7a726704cdbeb724aab9468ce2458da0f9cab5ae45144b21026bed25b71",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000044.png",
+      "rgb_sha256": "9be118213f5faf3e0680f8cdfa39b3f5fe04d7a2faecc906a3aedb19e005846c",
+      "source_index": 44
+    },
+    {
+      "file_sha256": "f6ed49e82bf22fad52afddbf75841b507f4b4437664ee14da717bc59b36d324c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000045.png",
+      "rgb_sha256": "81aa2cdbceb67c42575d356ff504ad48fdc37e457607daab92388f9b253a1c51",
+      "source_index": 45
+    },
+    {
+      "file_sha256": "bfcce0caf292877d70fc93edd808eb07401aab17d2f94f5ab3eb16ef59af022c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000046.png",
+      "rgb_sha256": "6d49f8847868c485214252c833e8ad1a44d213a8bdf77d41ed1c903ddf6ed1c6",
+      "source_index": 46
+    },
+    {
+      "file_sha256": "db2d2ba15a595fadbaf97ac60c1068eb330ff9b70be87dbbd3f6e7b90510bfe0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000047.png",
+      "rgb_sha256": "64feff046e2c137511b0b7eabd58c43fb1b07c968e84ab6abe0d226aeeccf9fc",
+      "source_index": 47
+    },
+    {
+      "file_sha256": "17a8bfccd1b401d017dd0bb4a1542091eababdaeccf0448698cc52ea30001c4f",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000048.png",
+      "rgb_sha256": "46a33e85c9c1e9cfde24fc629a5a2248b6ab682edc8061b25f65573d8d32164e",
+      "source_index": 48
+    },
+    {
+      "file_sha256": "5706c5381ebd9c9d1af07c61f08d2e846727ab6f8a135539018d32004145bec1",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000049.png",
+      "rgb_sha256": "866f9a69671defe30f46dccc706403b92d07f0207376ea32d07d4da7851ad977",
+      "source_index": 49
+    },
+    {
+      "file_sha256": "37e6829d28944819d75c5699f17aeeab852ce45cb004f3825444527029469850",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000050.png",
+      "rgb_sha256": "593fa35da6b18d9376142b6ad8daa02d1fa1ce77dae6df2a3705e20fb777106f",
+      "source_index": 50
+    },
+    {
+      "file_sha256": "c47ae0ae71240e30efc990dcba383bb16dbdb4082f92a7abc24eb753f759fda5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000051.png",
+      "rgb_sha256": "4c0940f1097250da73b8f32849524077914048be5e5e68aacab225837e7694ae",
+      "source_index": 51
+    },
+    {
+      "file_sha256": "1ead58b92b6b7fa126f30355165bf150744959beda1975d70b44d96fc98ad2d8",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000052.png",
+      "rgb_sha256": "123af797b5eb9816c10fd6029dddd558449a17f52c81f9a232b42fae32069936",
+      "source_index": 52
+    },
+    {
+      "file_sha256": "9abdc3abc3b48d06581a5b38249295add87df8b475b1b51dfbafa9119ce86fb5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000053.png",
+      "rgb_sha256": "d668e79393207cbaec5bb6ab62ce5c65b2f3382aafd0b0690872141f0624caca",
+      "source_index": 53
+    },
+    {
+      "file_sha256": "4fc34e8ba21627a3a869af5b0bb7f3f6d62ab21064fa3e278685b190615ecdd1",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000054.png",
+      "rgb_sha256": "a24ab57b6904c06dbafc4c167683f4ea9d0299c875b78291f50d53e64d3f38f4",
+      "source_index": 54
+    },
+    {
+      "file_sha256": "6f659c59c4b6b09932f3ff3b08b4423d200e53422cd134a3f4f6065bf2370966",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000055.png",
+      "rgb_sha256": "84b80cafdd9cf960be49b63826fcdaab530b35c07c081c85382236e59b7c8a10",
+      "source_index": 55
+    },
+    {
+      "file_sha256": "c911a1d1cfe55d6fd5851643457c8ffa57d32ee011f0b0a27362703bdfd6474d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000056.png",
+      "rgb_sha256": "49f2d38f5f504f105fe3717dd48c49e8252f44dc0b4842375008b50f77e5338f",
+      "source_index": 56
+    },
+    {
+      "file_sha256": "ddcc6ca3237e91fc4bc273fea608f3a2bcc972c25a3c761aaa0a4e28074b3af6",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000057.png",
+      "rgb_sha256": "60c737af84f2d4e85aa447877655456108bc9f2b8359b03b8d19a44fae5a5f2d",
+      "source_index": 57
+    },
+    {
+      "file_sha256": "5468fc3c9a888a879aac440b4bf3f4f1fa7d0061fc9b53644c6aae2f108ed3f4",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000058.png",
+      "rgb_sha256": "e3ad8c2f555df69733a9b317e972e318ca91313e1f823276a95382cc2d603cad",
+      "source_index": 58
+    },
+    {
+      "file_sha256": "c6600b421d07162622b1a33b084e5dded94faf89574d335afdb7b3632b0d52d5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000059.png",
+      "rgb_sha256": "6fce2bb4482fb9675e77e2652a0d0cbba2dafa5efed544f4262b8ffd70f4bb47",
+      "source_index": 59
+    },
+    {
+      "file_sha256": "7a8017acfbc38154aab71d3f071a4163bd86088c0a82f79ca3392fb69a6f4382",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000060.png",
+      "rgb_sha256": "6d7ab152b43de67d3bd6e40f870912786cbcaddc1f2d8da485efd556526c70ee",
+      "source_index": 60
+    },
+    {
+      "file_sha256": "219c7305b043ee27e8cda6414587096662a7ac4157635f0fa94355c4c2e45f40",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000061.png",
+      "rgb_sha256": "9dd4063e207908c99a15b1f43c17dbe0f380be8af0d9a5c8bc9f3646a15ce0aa",
+      "source_index": 61
+    },
+    {
+      "file_sha256": "c7030c85ebd60e041a1038e77532ecb8509a95ee37f3bc697c64804b6fe65a19",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000062.png",
+      "rgb_sha256": "45a4c2c454d429633e9425e3a0f99b99d37e8b40aa2c7a07a012b336d241c45d",
+      "source_index": 62
+    },
+    {
+      "file_sha256": "befcf3823ca2884e998ffcd45ed5dac9b84e86dccb04b3840385e99c20508b2e",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000063.png",
+      "rgb_sha256": "7ffcc4b672727e6b5c413ea8402d9c6ce5a656008c2e26ac228c9b65fee0b282",
+      "source_index": 63
+    },
+    {
+      "file_sha256": "eae7e572ff15624cb10ea3059ac6cabe4d84ef1aabe93e951464eb43052508d0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000064.png",
+      "rgb_sha256": "9a3ac0ed3545d02688edb03f7a51487d4df22ed5e03ea016f62a977daf3bd8b7",
+      "source_index": 64
+    },
+    {
+      "file_sha256": "bdefe5772b1d50cf1696c1335c3205faf4a18c42cd6a2ab40c5c01f2a54f1229",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000065.png",
+      "rgb_sha256": "fef30f1197a179b7cda2703615694084bd91f296c3ce5c465ce50ab68bcfb02f",
+      "source_index": 65
+    },
+    {
+      "file_sha256": "561d50fd8f9641cb5e9c9f846bf022796b316c3c80b733c0887b8034a8d81ccc",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000066.png",
+      "rgb_sha256": "22099d76e4404a8758eecdd1537731dae3ef1e0b20ef1f0d4cecc577083ee2b3",
+      "source_index": 66
+    },
+    {
+      "file_sha256": "9c2199ee7ca4a432ef703e3eb06b1eb36b778a446e3099596547c938b5bdcba0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000067.png",
+      "rgb_sha256": "6af502355c71b73259c1b492871b72d8ab9c00e9282d7b5935b5f63b9b53e51b",
+      "source_index": 67
+    },
+    {
+      "file_sha256": "7198db77312b3a4f8f108b793adcb0a98058b7dcb938a224d49c46290d92cc24",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000068.png",
+      "rgb_sha256": "cfe0637d5b6754c68096131ea81ee1b2dc50d82082a6c4d5a8504ee6004c6d15",
+      "source_index": 68
+    },
+    {
+      "file_sha256": "cb4f6512c0e4fd3a9d4213fc48901a0fc6b3a53b63ef34c55b968ea42bd753f5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000069.png",
+      "rgb_sha256": "1c5f8cc2b7a6ac37812993d89b1876972e0766c8cc05ceb424ce76ad047b7846",
+      "source_index": 69
+    },
+    {
+      "file_sha256": "f97cd2108036293b29d4ec27fb8e49c523e149ec6608fcf77b4f1536927f39d0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000070.png",
+      "rgb_sha256": "a5591ccb4d3f789bd2988e415205374dcc3a21cc38abe50d05e17521339bc231",
+      "source_index": 70
+    },
+    {
+      "file_sha256": "6296bbe3ffc536a6c95ebc2b76975a6bf0c59455a8f18a987b93b6da73afe3d5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000071.png",
+      "rgb_sha256": "959b4721f8af089fd93f247b361180bdf3dcd6ee6d100bdf4c7a14950db153b8",
+      "source_index": 71
+    },
+    {
+      "file_sha256": "e4803437fb9cb6a93abdaff6dd1ef1dfff556c6732af604560724eb3e2b68ecf",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000072.png",
+      "rgb_sha256": "780e249881b204c2bd3545301a6ea746c8374cc4b49ed5e7cb8e6caae3782b4f",
+      "source_index": 72
+    },
+    {
+      "file_sha256": "36cf5693d9affb26909f56e50f4f656d66a77015e60f41eddba697275933b3e6",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000073.png",
+      "rgb_sha256": "16e3c331da02476518ba50f5621df65a4ccd574dc3c2a5052d2eaa0ce50eb27d",
+      "source_index": 73
+    },
+    {
+      "file_sha256": "5f6ea2cc4e7411cc4cb32f32de804c9c1788a3aa99327d2f9a5d66c16795b5c5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000074.png",
+      "rgb_sha256": "b463325572cc183fe1b82c32b2ed75440ab51a982b6ccf885d81c61f6fa76b01",
+      "source_index": 74
+    },
+    {
+      "file_sha256": "9d68339d96d382b416d0d2a7c73ba9865e72e2b23f7e78099848a68322d07b80",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000075.png",
+      "rgb_sha256": "3c14d96b9b84bb40991a3c8fd16a5d354f68992b341e831615cd1aadf793f5ce",
+      "source_index": 75
+    },
+    {
+      "file_sha256": "1cc82c8b9724dea53618d8b5fd24e2479640f2e859054bdf538d2e891b14efcb",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000076.png",
+      "rgb_sha256": "8cfa6b343b52d0542b346e844db60800793113b05275432a2655b5042f0e1720",
+      "source_index": 76
+    },
+    {
+      "file_sha256": "9bd7007f7577170813c8f34e5d34e839a0687cc259da8e645bd324dab82ad4d0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000077.png",
+      "rgb_sha256": "44bec26cdbce0f375b78672961df143d7086b6ef31f3cf250f29c7533e5c09c0",
+      "source_index": 77
+    },
+    {
+      "file_sha256": "87d6f3b6c0d39a7026cbb855e6d8737621f878a19a9ae1f9805b69dfc69dcb1c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000078.png",
+      "rgb_sha256": "4d1b54d1c5a652a929b4f293f8e89c381a43e74ffe0afbec585a68dc95134e19",
+      "source_index": 78
+    },
+    {
+      "file_sha256": "a7b5b5cec900875feb19cc16d0875416daef071c738d7176ab925fe55a102d51",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000079.png",
+      "rgb_sha256": "a3db5225b001d1bd9ebe93e8694417ec73291a19a215cc600cffa195bfb0ff9b",
+      "source_index": 79
+    },
+    {
+      "file_sha256": "11fad77a6b79b7728b0b762ed7e98393d2b23eb06993aa36440a886236bb561d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000080.png",
+      "rgb_sha256": "43718754bd18889b7e562d6c63f8a270d773aece2fbf005a309908f32fb1736b",
+      "source_index": 80
+    },
+    {
+      "file_sha256": "9b378a94bb933f2abcc867094eecd4f839174be7e8118bedccbf235e9b14af8f",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000081.png",
+      "rgb_sha256": "462ee8debd62d8be423d2728ca1af2ca366f9b1e4a7fcf37e93e90d79f984c72",
+      "source_index": 81
+    },
+    {
+      "file_sha256": "c38dfe2a6eb498971b5064bcf667c19ab464cd1b39c011ac3f334c08106744c5",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000082.png",
+      "rgb_sha256": "033dfa2ca64e4060b2ddf76d0bc4222fc53baf7152c929ed55474420b923fbf3",
+      "source_index": 82
+    },
+    {
+      "file_sha256": "b11243bb01ad324790239d5591b1d51744bd9a26669649ff35e3cce0fb62b7fa",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000083.png",
+      "rgb_sha256": "940479acf88d2586dde252572c879b3bee1eeeb04cf6c1bcd5f1f132cba7cd3f",
+      "source_index": 83
+    },
+    {
+      "file_sha256": "bf149d92efd68745b377962e33365a586a713314b51607dd65e6606f391cee45",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000084.png",
+      "rgb_sha256": "8d30e4647f1900338b93c38b87c34c04cf43f1fd6a1cdd3dda9dde1c1549b357",
+      "source_index": 84
+    },
+    {
+      "file_sha256": "2ca7f0d9a3a15926444445269bf2b555ab11f5006aa249897c394000e7734357",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000085.png",
+      "rgb_sha256": "e4dcd5a2b2bc2f51ffecf6f0502f7cf675d23366d68e625b60f55b065bc8a754",
+      "source_index": 85
+    },
+    {
+      "file_sha256": "31e5c1cbc51d0fbcbeed27a04be3cfbde4674417cbfb9804892e43edbfec3982",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000086.png",
+      "rgb_sha256": "316f3079c61ea8f216eae3ccbd68049300d8e61a75f0ee775191f648dabaf98a",
+      "source_index": 86
+    },
+    {
+      "file_sha256": "d2799db49a7f28e397a4ef3f777175b83420ff48d8572685e9d0cc44b575f2d7",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000087.png",
+      "rgb_sha256": "622db0433b203d507043904a6d37ec6b167a46a12fdc30b0a06e684c7988ee6b",
+      "source_index": 87
+    },
+    {
+      "file_sha256": "a9c3aee83b266570ff5c2d2c887c8a8b4a2b43443649482eee2cb8cba253ff8f",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000088.png",
+      "rgb_sha256": "0eea5fb0d38eeb44c25d5aceb3297f897ad708e9d4c53ce7b91f88ea73635762",
+      "source_index": 88
+    },
+    {
+      "file_sha256": "03bc0ab323ec33aa813c0f1b0a0bce44a3fce02d4165b88ffcaa6c010b9dc81d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000089.png",
+      "rgb_sha256": "fdd1d1330e921c642e40f37ced22880f95d87aeae53ea99a0b7aeae15a6e5543",
+      "source_index": 89
+    },
+    {
+      "file_sha256": "0673ec486410daac4860af5aef42a55950fad72e0a9b952fdb9cfa49977f1fc0",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000090.png",
+      "rgb_sha256": "b537826445a4f93896d56a91808dd3f01284c9289ad1e09cfdd8b3f3d666bc8c",
+      "source_index": 90
+    },
+    {
+      "file_sha256": "78982912b1e7a7ed38ceb0ac52bb6df8c453ed6211d3cf9fd7f2957e5d2d7fd3",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000091.png",
+      "rgb_sha256": "c48399f0817db9e092302cf2f0490d751853712b26e32dda78054521344f8836",
+      "source_index": 91
+    },
+    {
+      "file_sha256": "021bac162f67a5933b67789bcfbb4ba0f79136db85d462bff205ee76c9f451cb",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000092.png",
+      "rgb_sha256": "e7c04b7de92f85dc7b988bf410fc83f9feb38016a450ff15dd9b67f759223017",
+      "source_index": 92
+    },
+    {
+      "file_sha256": "8c460806c77f585d52a528fd7ca160c74d2c4898559535bbe50ae259cc706541",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000093.png",
+      "rgb_sha256": "2f9a9c0dab20b37555c211428c8871a1ae23ef399df18cd008f6d85ce93c5555",
+      "source_index": 93
+    },
+    {
+      "file_sha256": "bb0f70259f5b1841bbb9ba387a99c0a446bec96914f10fc175418de1da57231a",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000094.png",
+      "rgb_sha256": "717dfce472c27a9e9a8385e7f6d50bebfc626e060ac3f1629463b73e6388329e",
+      "source_index": 94
+    },
+    {
+      "file_sha256": "a0167db9dad55e928ae8afc463def08023cff1db39b1c9cdbb92fac1724c17b2",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000095.png",
+      "rgb_sha256": "60b8c004afff3a081cb4d3e0809080142753b994ba88cd670a4a4cf325987313",
+      "source_index": 95
+    },
+    {
+      "file_sha256": "e8e2c7053691feea697ae96c9451a45b3183f710eae0cdbe15d4e6d3f9c157e7",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000096.png",
+      "rgb_sha256": "a8c7ce8f08a82da809028fffc254cfebcab745fa2cd6a8f73da75708bbe1d462",
+      "source_index": 96
+    },
+    {
+      "file_sha256": "8756ac4da3d6eaabd1b02d94adc4b6cb689585ed9a6a0590f5e88d27ff85da6f",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000097.png",
+      "rgb_sha256": "00951f464e1811b701d51502a0ede1f8cba25f5fa8a323fc8b05eacee37452d0",
+      "source_index": 97
+    },
+    {
+      "file_sha256": "ac50d68a1027583b33e6df5162c7dcef40f7971b1e8fc76b31c8dc96a8658131",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000098.png",
+      "rgb_sha256": "07706662bb5cf346992a68c892ff5b110882935f926402d27e21101fba57cbbe",
+      "source_index": 98
+    },
+    {
+      "file_sha256": "da5f7ec0c3a381ee8a9b41e5c0c0e590c5eec378a3c6af9003b75fbd68a66fa6",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000099.png",
+      "rgb_sha256": "ce0de1c81ff84ff3dc897154675ea355aa94d5e6ddd3dd96108fd7a3fe2ec737",
+      "source_index": 99
+    },
+    {
+      "file_sha256": "cdc6508776207d74841c102d28e5adc45c58a02de6c8c4e2e78bcd7dbc5a8588",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000100.png",
+      "rgb_sha256": "93afeffa7aa752227f0f008b1105a74f707ec8a75ba30b8df6ca09867a9b9dd9",
+      "source_index": 100
+    },
+    {
+      "file_sha256": "0f0c405eaa064648f67e3b67770fc2ba8a9cf478a6e8322ff37d8b56182f9f13",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000101.png",
+      "rgb_sha256": "805a74fee6a9729a78bad8c2a565323ade5ea7f7c866e676bf09b5d4aab0d32d",
+      "source_index": 101
+    },
+    {
+      "file_sha256": "edbbd54176b4a5d0e26a382792c9cedb889f1f4c6867068526d40ff38350c979",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000102.png",
+      "rgb_sha256": "655d75e0e715b5d98cb6ea0d4a1161d19af78aaa6c309c4c0f5ae21f1fc6964d",
+      "source_index": 102
+    },
+    {
+      "file_sha256": "19a8aa7b9ac0335f70ce71c3f0c7378e445552772cdeddcac1812aade3dadb01",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000103.png",
+      "rgb_sha256": "c34bbf49946594ab3c66b89f59bfb516b5126955883e061464d63506abd073d9",
+      "source_index": 103
+    },
+    {
+      "file_sha256": "9d4b437defba10f853f7e9f8ddd1c5fa942845967e4b552a7a8ec56fc08f3cfe",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000104.png",
+      "rgb_sha256": "cc9addee983ce34f982ef5f46bc56cb371479adc8364fbcbd49e3e0407359e5a",
+      "source_index": 104
+    },
+    {
+      "file_sha256": "5e77e8217b2fb00a5770de9d1bd347dd3421894b0394f85ee8380fc9caa81848",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000105.png",
+      "rgb_sha256": "0fc3862343f27b0314f30ab77039d5560147d0047f696bdb8516ea6890a3f042",
+      "source_index": 105
+    },
+    {
+      "file_sha256": "148885f6eb65e97e135e2123461080400f9a30b1c19a9db4d37b2c7fca37afd2",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000106.png",
+      "rgb_sha256": "4e39cdbfbfa588a918c71f3efe3de7ccfef820e8246e959de429b2a5b64220f7",
+      "source_index": 106
+    },
+    {
+      "file_sha256": "808c15185246fd922120623469bf65d443148dd9bd68ebf1d473bbdd6ef7499a",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000107.png",
+      "rgb_sha256": "d8bce3748e3c408ed131057b540d6307bb6accb28be032010b8edb3f29647374",
+      "source_index": 107
+    },
+    {
+      "file_sha256": "1104997d0766682b1f30bf4c51f217fe28708b9d0bd32eadf87e4b388e175895",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000108.png",
+      "rgb_sha256": "b6f7243a41d12c192114eee97e64cddaf223852e62a6fc870cbf6b82a236d821",
+      "source_index": 108
+    },
+    {
+      "file_sha256": "f04a98b23d23df8d769e8a26f9e109ca7c5be12cb7617060e08729bec231f4b4",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000109.png",
+      "rgb_sha256": "77b67e8256aea8d0119ff7c245ae71f0564a2e4c8703a687b951334bb6d1a0a7",
+      "source_index": 109
+    },
+    {
+      "file_sha256": "35e798b91c7ed2cf80e96b6a770a4eb948238ac9e4482651b61df929f25fa6ea",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000110.png",
+      "rgb_sha256": "858445ff44771a9fe87d909ec36ce7c2bce91f4b439689b093b73191d14f9213",
+      "source_index": 110
+    },
+    {
+      "file_sha256": "83ea2196898b3addf48c8176b5da219473544fea3254557207aae5347b477aa6",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000111.png",
+      "rgb_sha256": "7992dd74fa7edb3f3e839365b572793524f81a9f2b836ae18d6e17416ca5abdf",
+      "source_index": 111
+    },
+    {
+      "file_sha256": "c3f5bd9a58a03900d82dc289e0ea1ec86c09d592fb2a6be6dff5f73cce50ce28",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000112.png",
+      "rgb_sha256": "cf6fd412486f4d422b4991d06fa8d15cfb45a62beba0f3501750a3329deb041a",
+      "source_index": 112
+    },
+    {
+      "file_sha256": "ed5bce89342aba52e4b8672eda10fa6f2602b760ea8d3140275302a12c7fdc2c",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000113.png",
+      "rgb_sha256": "b22f94af11009ba842f97fcf9ad8deaffcbaecc8e589ae6db930153785ef2461",
+      "source_index": 113
+    },
+    {
+      "file_sha256": "f9672cfd8777c6f6923c562bc8bf4cb7ae62f5b8588029e790c43b1d9b35c4a1",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000114.png",
+      "rgb_sha256": "3dbf082aecde1410e0959264e048a7888797acf0d7d5f11549f318d55b414181",
+      "source_index": 114
+    },
+    {
+      "file_sha256": "534c62d946056a8fd0e949c76f1202d82ed4d4ac56d1aa8225b6a47f31c4131d",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000115.png",
+      "rgb_sha256": "4c9741c96bf8e2863833faad4e6bef4eb3e57f5e79de4d4693c399e82404dc01",
+      "source_index": 115
+    },
+    {
+      "file_sha256": "9d4e8afc44b58f3b8da8f6f979865c97114898b25b0fcfbec338af7c22272025",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000116.png",
+      "rgb_sha256": "6b28e35356e8a23556c48b4f7063dd9af42d98ca08b269483809138e13d531c0",
+      "source_index": 116
+    },
+    {
+      "file_sha256": "38893cebefb988b43400365e42995dab82f49bd7f7e618f1d43e4fb671fe2bc2",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000117.png",
+      "rgb_sha256": "d685fafb6c9433625397447e60044fbc91828c267e200e046bfff198b6f560fe",
+      "source_index": 117
+    },
+    {
+      "file_sha256": "0692c5ac1491e3c957915929a635382dc7e7759f71795c284e6c2c540bf48c72",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000118.png",
+      "rgb_sha256": "4d656bd11e231fd89146d221546159b6ed45ef8f11348430fcee5aa28c71f4cd",
+      "source_index": 118
+    },
+    {
+      "file_sha256": "8a04eaa343dda1b26cb1c10ca890f34f90d9a2ed88901686928ec41385f861a1",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000119.png",
+      "rgb_sha256": "cffb7c4e51110c02bdf840ebdc8d1bf448bb604280ff840f03636c6aacce5d8b",
+      "source_index": 119
+    },
+    {
+      "file_sha256": "f8e64cceba9bf1b7f4bae3f76032a21f77043a74c91498482adfe1f963086d92",
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/generated_frames/frame_000120.png",
+      "rgb_sha256": "6e1aa2b7f5b25cf2d9bac0bfb39c6884ca1820aa1075f5506f203e52c533ef7d",
+      "source_index": 120
+    }
+  ],
+  "generation_assessment": {
+    "automatic_checks_passed": true,
+    "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/assessment/comparability.json",
+    "rule_version": "framelock-comparability-p0-v1",
+    "sha256": "8f5fb390bbf32f22e82e154337e43e0ca5c8ac03c2021bce6c33d5ba05d2765d"
+  },
+  "geometry_overlays": [
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000000.png",
+      "sha256": "0f66bc22483cb7a4c48a3fd89bc74eed52bb906a349ddc5159527e536958f610",
+      "source_index": 0
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000060.png",
+      "sha256": "3400e442c16851d303c6024e2a5808f256ac52936e05700bdd9f755c734eefa2",
+      "source_index": 60
+    },
+    {
+      "path": "/Users/jinchoi/Code/video/artifacts/jobs/synthetic-hero-kling-o3-001/canonical/geometry_overlays/overlay_000120.png",
+      "sha256": "d1898ca380dbf342e1ba496711da545446d85703f0bed22ff56f51381081b2b7",
+      "source_index": 120
+    }
+  ],
+  "job": {
+    "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+    "generation_digest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec",
+    "id": "synthetic-hero-kling-o3-001",
+    "model_output_sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+    "request_id": "019f72e4-5e1e-7143-bf91-e3aac20328da",
+    "restoration_mask_sha256": "ee375951c0fe4233ad442d7b18a23d770b63a0f195bb8fac1bae769d03b7b2f3",
+    "source_sha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d"
+  },
+  "prepared_at": "2026-07-18T02:29:47.490389+00:00",
+  "prepared_foreground_mask": {
+    "path": "/Users/jinchoi/Code/video/artifacts/runs/synthetic-hero-offline-hardening-v2/inputs/foreground.png",
+    "sha256": "ee375951c0fe4233ad442d7b18a23d770b63a0f195bb8fac1bae769d03b7b2f3"
+  },
+  "review_state": "awaiting_visual_geometry_approval",
+  "reviewed_source_indices": [
+    0,
+    60,
+    120
+  ],
+  "schema_version": 1,
+  "source_proof": {
+    "directory": "/Users/jinchoi/Code/video/artifacts/runs/synthetic-hero-offline-hardening-v2/proof",
+    "ingest_digest_sha256": "eaa7f8f786154da85f7a3cbb8fc01eb90d82f75b6849e9e46f3f4709076659b9",
+    "proof_manifest_sha256": "331e47f447cf506d12ab56690dfda1b5f909c14289a9304bfc9cd395b844dc39"
+  }
+}

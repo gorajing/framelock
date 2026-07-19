@@ -1,0 +1,49 @@
+{
+  "id": "synthetic-hero-kling-o3-001",
+  "state": "verified",
+  "createdAt": "2026-07-18T01:43:15.371Z",
+  "updatedAt": "2026-07-18T02:57:02.774Z",
+  "generation": {
+    "sourceSha256": "abd4cfa2fcd84a376394a1af421d32ba8687e0d4b5bd44a2607a822b6ecdf67d",
+    "editMaskSha256": "ee375951c0fe4233ad442d7b18a23d770b63a0f195bb8fac1bae769d03b7b2f3",
+    "prompt": "Transform @Video1 into a cinematic locked-off product commercial in a rain-soaked neon laboratory at night. Animate cyan and magenta light sweeps, drifting mist and rain around the centered package. Keep the camera fixed. Preserve the package silhouette, position, scale and front-facing orientation. Do not crop, letterbox, stretch, zoom or change aspect ratio.",
+    "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+    "parameters": {
+      "keep_audio": false,
+      "shot_type": "customize"
+    },
+    "digest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec"
+  },
+  "fal": {
+    "generationDigest": "5904668bac601b16a113e9801688f6f5bb5046d11208a610749e4bb5bc8cf3ec",
+    "endpoint": "fal-ai/kling-video/o3/standard/video-to-video/edit",
+    "requestId": "019f72e4-5e1e-7143-bf91-e3aac20328da",
+    "sourceUploadUrl": "https://v3b.fal.media/files/b/0aa2af78/dLdyDgHpeW-dGAlTDGwiv_framelock-hero.mp4",
+    "modelOutput": {
+      "artifactId": "sha256:6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+      "sha256": "6338c100b4d0935adfd96698ec1abaf9e3a9306c09099e55358c43cc5a5fe3ef",
+      "url": "https://v3b.fal.media/files/b/0aa2af8d/jE7ARouHJgrYIENp7DMZ2_output.mp4",
+      "contentType": "video/mp4"
+    }
+  },
+  "assessment": {
+    "verdict": "comparable",
+    "sha256": "8f5fb390bbf32f22e82e154337e43e0ca5c8ac03c2021bce6c33d5ba05d2765d"
+  },
+  "composition": {
+    "proofManifestSha256": "3d422399eb6eea30346ddd239c9370333999fa867127a73bb9bd41ba10e6f644"
+  },
+  "verification": {
+    "claim": "Protected core verified — canonical pre-encode frame sequence.",
+    "auditSha256": "06590d6521d90a111b3281c5c13e04c07ec15c187ccb6bfad7373e8efa5e5799",
+    "runManifestSha256": "f8a599b98694bcc52b9504e5f119674a3f5b0d4d13fbc97e18a4079d47efe7ab",
+    "previewSha256": "154178d10072cad6437459bc8a92ccecfc9a847e8af3a07fca682c3774478876",
+    "framesAudited": 121,
+    "framesWithNonEmptyCore": 121,
+    "totalCorePixels": 22029381,
+    "changedCoreChannelSamples": 0,
+    "worstMaxChannelDelta": 0,
+    "coreHashMatchCount": 121,
+    "stage": "canonical_pre_encode"
+  }
+}

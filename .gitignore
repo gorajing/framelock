@@ -1,0 +1,35 @@
+.firecrawl/
+.playwright-mcp/
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# FrameLock local media and job state
+artifacts/
+runs/
+tmp/
+
+# The compact, hash-bound motion demo export intentionally mirrors its
+# original project-relative paths under a dedicated deployment root.
+!demo-evidence/motion/root/artifacts/
+!demo-evidence/motion/root/artifacts/**
+!demo-evidence/static/root/artifacts/
+!demo-evidence/static/root/artifacts/**

@@ -1,0 +1,875 @@
+{
+  "artifact_root": "/Users/jinchoi/Code/video/artifacts/motion-v1/demo-media/mask-preview-v1",
+  "contract": {
+    "codec": "h264",
+    "container": "mp4",
+    "frame_count": 121,
+    "frame_rate": "24/1",
+    "height": 720,
+    "pixel_format": "yuv420p",
+    "width": 1280
+  },
+  "digest_sha256": "cd5a7778b24af70e3c309bf5e7db37411ba50e27aee8f9668d70dde1d186d750",
+  "encoder": {
+    "argv": [
+      "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-loglevel",
+      "error",
+      "-framerate",
+      "24",
+      "-start_number",
+      "0",
+      "-pattern_type",
+      "sequence",
+      "-i",
+      "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_%06d.png",
+      "-map",
+      "0:v:0",
+      "-frames:v",
+      "121",
+      "-vf",
+      "scale=w=1280:h=720:in_range=pc:out_range=tv:out_color_matrix=bt709:flags=accurate_rnd+full_chroma_int,format=yuv420p,setsar=1",
+      "-fps_mode",
+      "passthrough",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "slow",
+      "-crf",
+      "18",
+      "-profile:v",
+      "high",
+      "-level:v",
+      "3.1",
+      "-pix_fmt",
+      "yuv420p",
+      "-threads:v",
+      "1",
+      "-x264-params",
+      "keyint=48:min-keyint=48:scenecut=0:colorprim=bt709:transfer=bt709:colormatrix=bt709:fullrange=off:threads=1:lookahead-threads=1",
+      "-video_track_timescale",
+      "24000",
+      "-tag:v",
+      "avc1",
+      "-an",
+      "-sn",
+      "-dn",
+      "-map_metadata",
+      "-1",
+      "-fflags",
+      "+bitexact",
+      "-flags:v",
+      "+bitexact",
+      "-movflags",
+      "+faststart",
+      "-n",
+      "/Users/jinchoi/Code/video/artifacts/motion-v1/demo-media/mask-preview-v1/mask-preview.mp4"
+    ],
+    "ffmpeg_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffmpeg",
+    "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "settings": {
+      "audio": "absent",
+      "codec": "libx264",
+      "container": "mp4",
+      "crf": 18,
+      "filtergraph": "scale=w=1280:h=720:in_range=pc:out_range=tv:out_color_matrix=bt709:flags=accurate_rnd+full_chroma_int,format=yuv420p,setsar=1",
+      "frame_count": 121,
+      "frame_rate": "24/1",
+      "level": "3.1",
+      "pixel_format": "yuv420p",
+      "preset": "slow",
+      "profile": "high",
+      "thread_count": 1,
+      "video_track_timescale": 24000,
+      "x264_parameters": "keyint=48:min-keyint=48:scenecut=0:colorprim=bt709:transfer=bt709:colormatrix=bt709:fullrange=off:threads=1:lookahead-threads=1"
+    }
+  },
+  "kind": "framelock_temporal_mask_preview",
+  "output": {
+    "bytes": 218775,
+    "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/demo-media/mask-preview-v1/mask-preview.mp4",
+    "probe": {
+      "argv": [
+        "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+        "-v",
+        "error",
+        "-select_streams",
+        "V:0",
+        "-show_streams",
+        "-show_format",
+        "-show_frames",
+        "-show_entries",
+        "format=format_name,size,duration:format_tags=major_brand:stream=index,codec_type,codec_name,width,height,pix_fmt,sample_aspect_ratio,display_aspect_ratio,r_frame_rate,avg_frame_rate,time_base,start_time,duration,color_range,color_space,color_transfer,color_primaries,chroma_location:stream_tags=rotate:stream_side_data=rotation,displaymatrix:frame=pts,best_effort_timestamp_time,width,height,pix_fmt",
+        "-of",
+        "json",
+        "/Users/jinchoi/Code/video/artifacts/motion-v1/demo-media/mask-preview-v1/mask-preview.mp4"
+      ],
+      "facts": {
+        "chroma_location": "left",
+        "codec": "h264",
+        "color_primaries": "bt709",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "container": "mp4",
+        "declared_duration_seconds": 5.041667,
+        "file_size_bytes": 218775,
+        "frame_count": 121,
+        "frame_rate": "24/1",
+        "height": 720,
+        "maximum_pts_residual_microseconds": 0,
+        "pixel_format": "yuv420p",
+        "presentation_timestamp_count": 121,
+        "presentation_timestamps_sha256": "a304e6a9d74f6194de1a9bd8bf5e81c0ca98d3f5525c8203a42943304ba53a0f",
+        "rotation_degrees": 0,
+        "sample_aspect_ratio": "1/1",
+        "time_base": "1/24000",
+        "width": 1280
+      },
+      "ffprobe_executable": "/opt/homebrew/Cellar/ffmpeg/8.1/bin/ffprobe",
+      "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+      "raw_json_sha256": "47b87279c5b5112e8c648acee2cfb012d66442cffc8304378b7a74ecad78dc85"
+    },
+    "sha256": "5ff2ed027f581555e9cae7c775348ea761ae509e54617f73b980e5011e634cd7"
+  },
+  "schema_version": 1,
+  "source": {
+    "ordered_soft_mask_digest_sha256": "d2d8c4c11b956344c9a327158c0db24973073dfd3826c82b1af61e415044b6e3",
+    "soft_masks": [
+      {
+        "file_sha256": "098581a44d24244bb49256bcab6732060abe75c131f268692bf2db1da433f09a",
+        "index": 0,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000000.png",
+        "pixels_sha256": "6306e4d908004a386113c6ebefc6d56e793f03d03368633cd8b4e418791003e5"
+      },
+      {
+        "file_sha256": "2d1b6345ddc1980738ac1fcbe8bc4a4d18295c7cedce30f186aacd094bcf80bb",
+        "index": 1,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000001.png",
+        "pixels_sha256": "3fc6fd6c5f3c1ea215ea208512d406f8959ae0661322b7261aab735604250eda"
+      },
+      {
+        "file_sha256": "27540cf8775789046d7a16891c50ccfd28c00c44f38907b40883ed69135e3941",
+        "index": 2,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000002.png",
+        "pixels_sha256": "9fa660cc57889a447446416ac245f50fed2ba3489fcbf65736c0c88112467733"
+      },
+      {
+        "file_sha256": "fc6517a07e6182ab60c59979fe71f665979d4dac07a5151f075df47551936d32",
+        "index": 3,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000003.png",
+        "pixels_sha256": "cef58f12426e0c5161f0b6f266e9fae5d01c5a43e647864a70791aa539fae984"
+      },
+      {
+        "file_sha256": "d2e74c815f67fc47f6ad69a5f8783b8fa3017f192cf32102eafdbe39d845959c",
+        "index": 4,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000004.png",
+        "pixels_sha256": "7bf0fd4d5a9ccaee7651a907ad9a33007c4f93ba1957ca6c8ddde8e253c4219e"
+      },
+      {
+        "file_sha256": "119df4b2295f0ca1e258cdeaab7352547f8b819c94eda35e4911b512a2412b0c",
+        "index": 5,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000005.png",
+        "pixels_sha256": "e834679f47f87661bc0222c91ec88f637749b5843e44869b219afef07afed7ae"
+      },
+      {
+        "file_sha256": "63806bf86170d8aff16d5264b440a568e9a94dc335a1c2804a383bb07f9e9a52",
+        "index": 6,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000006.png",
+        "pixels_sha256": "b32f6162bbac51edfc2198f54d7d0e104d5432fab4c4d6fc742cf709eb0bb796"
+      },
+      {
+        "file_sha256": "6caad5aeaab0b96692408ef173c5fe869948a0f9fd9df94869aa546b1e536c7f",
+        "index": 7,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000007.png",
+        "pixels_sha256": "3829f42b7d8ffa21a878e1e3eec843594d44511f3a518e347ac56cee565af832"
+      },
+      {
+        "file_sha256": "0385a859df5ec5c4f19ad0a451c06db9505c32f08b7d879ea9ab806fed20c4f7",
+        "index": 8,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000008.png",
+        "pixels_sha256": "493a72cb0414b874f93c6d8637cf9c39e4d13c21915f198287f2274093e60dce"
+      },
+      {
+        "file_sha256": "d2ff03deeca5c3cf99c095098cca34931df7f4368ce1b9491e2388a881fd2441",
+        "index": 9,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000009.png",
+        "pixels_sha256": "aa8b7723f70affb1d92d9d00d146a0d911ca8a59d55c66976a3a0ab8eec1e83f"
+      },
+      {
+        "file_sha256": "71a0ed205497fc9f837d882df369f651246deb34cc94040229d87594faafbedf",
+        "index": 10,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000010.png",
+        "pixels_sha256": "bc11665e9618e810fa3dfce774de3da9d5cca134ac30e57dec99ca9bddf7e335"
+      },
+      {
+        "file_sha256": "f371f28da2f02da80ca8977e718f1e68c55f11dbfbd75642d483fc8a4f7f580c",
+        "index": 11,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000011.png",
+        "pixels_sha256": "fa400c74cdd7e6dff338e6db98faeb53420ba037ceabbbad6d4010f08e4037cd"
+      },
+      {
+        "file_sha256": "6b8711e5fc330b59fb1a0574c46ba4d32611a48398a768ce03d98fe138aa5cda",
+        "index": 12,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000012.png",
+        "pixels_sha256": "b4b6d8ed05d8ce42552a9c8027464874493fb6a9b2cf128cc2e3fd024de36bb7"
+      },
+      {
+        "file_sha256": "3e1c3030948ee4b7666f1d0da62b7509f16835bf2b5e380fe5eb0eda756eb99f",
+        "index": 13,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000013.png",
+        "pixels_sha256": "e68d61a9425e72e477eab53509b1b427b551c498488ac4e2780142313d06b1ef"
+      },
+      {
+        "file_sha256": "e0c2027b4f084d5d8a0c99448a26c812a899b4f1596690b190a407105b70ffb3",
+        "index": 14,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000014.png",
+        "pixels_sha256": "86009b7b8f3ab9f4b795a126a9dc398c2d9a505cff71642533682f49fd4ba16d"
+      },
+      {
+        "file_sha256": "f8d1a71a4c5e95cbfd3382054ff62868988e4f01c97efe07dfbffbf4ceb12df6",
+        "index": 15,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000015.png",
+        "pixels_sha256": "c4dc888169519347f262dc0e321795be74178bf8604b942f2784d03bd8a0b39a"
+      },
+      {
+        "file_sha256": "56196eeb513abfa76e6ca5752f8d41df3fb6efa88f06e9b1e79e0de641b4d41c",
+        "index": 16,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000016.png",
+        "pixels_sha256": "2b6acd83760d63ef678e122609fbd596b07620058b553d0a9f3db1fb67be3abc"
+      },
+      {
+        "file_sha256": "31209802f1fd2b6ac27993ddee7114032e59cf72fef3526774ac084cfcc0b4d8",
+        "index": 17,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000017.png",
+        "pixels_sha256": "b58aea8c6bf540122ccbde9054703df358c7655902de687222622d8f3986f123"
+      },
+      {
+        "file_sha256": "1e76296a922206d095addc80f7799b0158ae595952855d14366fdc0eb2f1d93b",
+        "index": 18,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000018.png",
+        "pixels_sha256": "603041ec95f7f984762d1c1e9dd978f399622dc77896c47ce4999118be80f208"
+      },
+      {
+        "file_sha256": "bcc45efb10a500e94983c491ee01cda1df60a9b4f1c3e4a10fcaeaf320e1ea9d",
+        "index": 19,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000019.png",
+        "pixels_sha256": "24113803cade728eb3a566f69cf0c62f61076b38c5ad3677593a96d701b0446d"
+      },
+      {
+        "file_sha256": "57130a61cfe15656df2e58503f496e98dcb45df4f4982eab2b3d2a63199df746",
+        "index": 20,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000020.png",
+        "pixels_sha256": "12594ce96343206f3d414a5ded8355738c90a3dbbd9eb61cc1ee9c828b75b32e"
+      },
+      {
+        "file_sha256": "982b953e086c8cde0ad7941b8a5ecec00843ae35c7d3b2527a54509fcc579500",
+        "index": 21,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000021.png",
+        "pixels_sha256": "36b9658c5c687c4326c7cf36995e8ab56b5c2cc8c15fe119a47140106f9b0884"
+      },
+      {
+        "file_sha256": "ea07a8c458f3ed46e54a72da59204b7dfe48c859eb53552692a6fc6206c6b10e",
+        "index": 22,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000022.png",
+        "pixels_sha256": "0eb3c1ae90a2783969ae546f0855eb1d886634001e353aac29c6a5ac01409006"
+      },
+      {
+        "file_sha256": "58c48ca2963de06e462b7ee2f6a715e7bda75f7015269c25c494d16c5cac8b95",
+        "index": 23,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000023.png",
+        "pixels_sha256": "3f8f5b66373312db332a414100cf335cd354214297b5efdcf9812aa42a71885a"
+      },
+      {
+        "file_sha256": "224e2349f62400c1b90c4db0a9c44e3cde00640074721369a1f16b307e095436",
+        "index": 24,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000024.png",
+        "pixels_sha256": "441655c7bff60816a57849d94df419c198fc7ada515584823fb788f9ed181967"
+      },
+      {
+        "file_sha256": "006876e10f9244e2b29c3472c7e0235defa8af951d6dbae79bba94d7a469e3e6",
+        "index": 25,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000025.png",
+        "pixels_sha256": "adac3f46018fc83de0e9e023717b6df1350c324b9f7ca104d97bc2dda45b6090"
+      },
+      {
+        "file_sha256": "438bfa625251899fe9303f3ba08960b6dc9e315636ef92ed4465a8239b02d63d",
+        "index": 26,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000026.png",
+        "pixels_sha256": "1ec73c8b39b5aba1cf4639b4fa80853b8f60e32f0074926c3a2d3b4efc4fabc6"
+      },
+      {
+        "file_sha256": "1603da663228a609b31f5a94515bd62ce7a98eafffa9a9aa79fcaa1c3eb09ec4",
+        "index": 27,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000027.png",
+        "pixels_sha256": "141d59eef8368443ca6ee3b18cb638a5c3f8d858b00869efc658aa25aa88dfae"
+      },
+      {
+        "file_sha256": "09b499d299b19d869732889b75643588c1e26da95dc1195c540cac13b2368219",
+        "index": 28,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000028.png",
+        "pixels_sha256": "049cd46dc61039d41794e268d3d926e7360e67d08283c305646a3a94a7db594f"
+      },
+      {
+        "file_sha256": "c866d8f2de18133f766f12c2a8bbfe98eada3a1bea93c416d046e6d4a4836596",
+        "index": 29,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000029.png",
+        "pixels_sha256": "e2339b7cbc3c7fb57395f618a8646607edb214543a8994f0e187b4dc7e2c24d1"
+      },
+      {
+        "file_sha256": "ab1230210bfe2c4307eb1000d7564328c52a5d263eaa387e5ab28316987fe22d",
+        "index": 30,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000030.png",
+        "pixels_sha256": "cec22c77e89cb6ec787d1355aeafd9c008e5682b30351ccf068a46d60029925c"
+      },
+      {
+        "file_sha256": "ac9c1686fbea536bb4340e120731405c7bbe101166618189842141330d023514",
+        "index": 31,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000031.png",
+        "pixels_sha256": "9379dbfc9942171ee060c6957d5d51772713cacb41226b57d63ac45bbf041e61"
+      },
+      {
+        "file_sha256": "65dd7f728986283d1e816acde512973b9744bc20220dc7277c91ad748c2c28e1",
+        "index": 32,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000032.png",
+        "pixels_sha256": "c9d92fc060e5e200ddb5fd5d5d46cb93a09aa9da91dc6d6507a9c305094c6ef6"
+      },
+      {
+        "file_sha256": "74c41e069a1da003511d8c5581fb486f6d2686c8502e51e1291ecbfab397f4cf",
+        "index": 33,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000033.png",
+        "pixels_sha256": "4f75979f4a739513be134398b27f5372170f6c84114ac23b0993fb3d7508de80"
+      },
+      {
+        "file_sha256": "1141be4b5dcd5fd579f56c9d47d5f81eb1909d6c3b0c7dfbb332c730cfb2a94e",
+        "index": 34,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000034.png",
+        "pixels_sha256": "6f38864e469e02419d1d1c5d1556fb37b4f51a0bc9c51daf42edc2524a79208d"
+      },
+      {
+        "file_sha256": "c7cb7e14b0bcf9b1860050d4396cfe126d121b85c0d9e431cfd3af7513025c62",
+        "index": 35,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000035.png",
+        "pixels_sha256": "4edaa7ac5d309e05940272ebc9b51f6d4fcd677029a24f9609f6c598c696bb8a"
+      },
+      {
+        "file_sha256": "b3e4c18cdb13c142b61a6a82bef5f3f14e4bb8f97ee1a7efe099003516526528",
+        "index": 36,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000036.png",
+        "pixels_sha256": "64e31e3204c80432184ebf9262d1caf36364117548df8c5348b17622a2aba33f"
+      },
+      {
+        "file_sha256": "2866685e524fdeb8e5e8a97fd130c1fd7299a003441f8475a07358be41565e7b",
+        "index": 37,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000037.png",
+        "pixels_sha256": "8435a572bfd7a8e18f1e4c3b511b98125b0ddb374c41fd6dcb075c794252d865"
+      },
+      {
+        "file_sha256": "28dda1a3ec82fcd693a7fc84b756c3ed8e7b94369046b016eebc03c29216b874",
+        "index": 38,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000038.png",
+        "pixels_sha256": "02b90595604cc93ba4b6206827cd51ee742136aecc489bcebd8aee9f2bad23fa"
+      },
+      {
+        "file_sha256": "522eb231cc8f6c37095b39fe34d9bf572b55a9b63a72c77c92a81ab241cd0955",
+        "index": 39,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000039.png",
+        "pixels_sha256": "1ce938debe91f4e79347cd386f83c549267c8f07dc49bb3740eb2cf8cb074d8a"
+      },
+      {
+        "file_sha256": "d7d31b21f47ec7a8bc6301ea2dd583d98fe7e2e7bdb749749861352c65ef5174",
+        "index": 40,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000040.png",
+        "pixels_sha256": "bb62a42379563203d05f51b45e9886bf09a3b329f9b6478bcfa4de06c3c34d4c"
+      },
+      {
+        "file_sha256": "4824166f2d88acd2a49d26bd519a31af8312cac62c037d837eaec41c78f4157f",
+        "index": 41,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000041.png",
+        "pixels_sha256": "b586ac399ccaa9bd55f9fc92e38697451f6b795a28111dbd155af8520e5839b6"
+      },
+      {
+        "file_sha256": "617c97adbf69ef8ef4d9f83dceeb799aee205ccd1648f53f6cd2e1847d89364a",
+        "index": 42,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000042.png",
+        "pixels_sha256": "cba15bf1aaf0893eb1737c3ed54ad0d5f120a50aaf46678319cafb7674b1fff8"
+      },
+      {
+        "file_sha256": "bd720f36e02a292a7ff1d130c6843e09923d73ff13985b6e06f0f271d0843537",
+        "index": 43,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000043.png",
+        "pixels_sha256": "924c12f58df7110d028564f9305b9ea88f3fa1743c737e8199dc917ca8f4e67b"
+      },
+      {
+        "file_sha256": "9fb547a0cb45f8be75f8cfd9ab084242fe9ff635dc586eebfef1657ce1d81e2d",
+        "index": 44,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000044.png",
+        "pixels_sha256": "e044131ca30e541d0d7cb53791238c3d7910e1aa331ce8a0d5bc90cca6454814"
+      },
+      {
+        "file_sha256": "af2a89cc59b48f920b0a3b4f1970fb6ec14050cecfa373d2750f7ad65fafda6f",
+        "index": 45,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000045.png",
+        "pixels_sha256": "efd2c22923b3884fc1f3af1fe6c2c48a98aa4f1bc1f884ee4448093b2360ce29"
+      },
+      {
+        "file_sha256": "9ac3606d96d60a0590dd970114b35240868bbe5e028ead647b26ddd3c8bb0845",
+        "index": 46,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000046.png",
+        "pixels_sha256": "afd033ded698ffe0a28944255862c744a7295d8b0094126363092f456dec9e79"
+      },
+      {
+        "file_sha256": "73deb5ce0fc064449cf02d4f5031f34526248c07848d5a5aee92a71d61b4fdec",
+        "index": 47,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000047.png",
+        "pixels_sha256": "4ee095455e8c976f330a463bd95dc1e7f389fcb959fb750eccb8be4dc30160d4"
+      },
+      {
+        "file_sha256": "90fa4184beb11331d7031f6e06e556cbc74884c06c7734cb927df251868e80aa",
+        "index": 48,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000048.png",
+        "pixels_sha256": "bad8266e3a1275e413db686ab9f1285f893fa8572d1dabb790e10db6f2dde576"
+      },
+      {
+        "file_sha256": "a720bd210bbab7d59540170c25cc14de835caf19449c853216e16c701f4b71d1",
+        "index": 49,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000049.png",
+        "pixels_sha256": "754aef897a2cd91824c6fa4dded9fe0aba0ee6d540ca42f57343e9f93b53bb58"
+      },
+      {
+        "file_sha256": "3f36bff34270dac3676e32f361816625ea2ab0f95977019d5a3e197f0d6f5137",
+        "index": 50,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000050.png",
+        "pixels_sha256": "49822903a9796e45a332037c678501bba5e1e2a8104c229cdd9db75f7c1fed6e"
+      },
+      {
+        "file_sha256": "1e02623b4bb4ad625fe74e69df7395d1de9159c171aadedb75ec6394f1fbbe63",
+        "index": 51,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000051.png",
+        "pixels_sha256": "090a28c0c874f3ff08e4be4ea51f415555cda58045d5d6b94702465e502072ab"
+      },
+      {
+        "file_sha256": "345af4adb5507213310f2683c63c4ecba5ecbe37ac623102d5b50b83aa2db94f",
+        "index": 52,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000052.png",
+        "pixels_sha256": "3bde266fdd3eaa83e628000ef3b46d9cf46dcb6556cd2c129bcbc664ce73dc93"
+      },
+      {
+        "file_sha256": "404255ab024088d80d7961ff71f2abfc1d0a7511957069188a5da4f140143f5d",
+        "index": 53,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000053.png",
+        "pixels_sha256": "e7ddc985d7f188b982b55083896a0c729f0ab15ac7101ea1bafb3864529db2e7"
+      },
+      {
+        "file_sha256": "bde1d33f8dfafffc5ebab38d5eaa0006cfdbb3121637fdca384df0ef7af758a7",
+        "index": 54,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000054.png",
+        "pixels_sha256": "141df1c1ae2f1ed2a84497996b59fa8dd4971ada85393880ee2ccbc57378da26"
+      },
+      {
+        "file_sha256": "543af338f8cb0771f19bc5b40855a8e2f37390af0debb68cea9e12c371353fed",
+        "index": 55,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000055.png",
+        "pixels_sha256": "ae4ab04ab7d15e5cded46e29ed3785ba996c81c3fc2d644938f0a821097c9414"
+      },
+      {
+        "file_sha256": "b842369ee8c7af9590b3baae0250a1e37132648c1141c96fef168bb377ed91cd",
+        "index": 56,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000056.png",
+        "pixels_sha256": "9e4a0ba3896f1207b2823cb622de57c8bc3b611a6115d7b1529de018ae8bfb0e"
+      },
+      {
+        "file_sha256": "0007f9df9e233a47f333b306526022a787e46a21de30756fcc532f728fa74034",
+        "index": 57,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000057.png",
+        "pixels_sha256": "0821c40766be295e46305ee45996573df352061a970210bfb01258b4a4271aaa"
+      },
+      {
+        "file_sha256": "5ac353476349c72beb3df4ec312b2a570dd0ddc3c3a873a97a810c5609275712",
+        "index": 58,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000058.png",
+        "pixels_sha256": "47d03d8e63ef70074662301c1f08da8b8b5b753793776d8ad69b915cd2c9afb9"
+      },
+      {
+        "file_sha256": "e4a090ecc395f2b7115b97bb4e5828fb985a6a0346914dd3146377e9667f8b83",
+        "index": 59,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000059.png",
+        "pixels_sha256": "d56fc326859df68401cc9280e5dc9d70773e29f0f6ad9ba28cc7bac7cad99826"
+      },
+      {
+        "file_sha256": "fa21e61d0e64f300a9633027d71b0fd6e24df12716674c51e0dd3f2af2e76a06",
+        "index": 60,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000060.png",
+        "pixels_sha256": "e357b4afc39bcd2cfe94f2cda6fc071d7d5c0d6ec9da57f752882343b2722794"
+      },
+      {
+        "file_sha256": "f764b9d8d28db7bcafe8c2d6730407092f3ea70ab410b7b01bb82e68df1c8c4a",
+        "index": 61,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000061.png",
+        "pixels_sha256": "ab5c5fa6053a52aa91309934a7638365c2f045676b87c05a32f4f5ed02725ea5"
+      },
+      {
+        "file_sha256": "2e016cfaaf5c41a2cf8a58254ab03af06e7977ff7f774a36dabc7412511fae27",
+        "index": 62,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000062.png",
+        "pixels_sha256": "3238a9000b02dc68b4134ca31fba0ff348fedbedc64dd2c2c0e42f237b6cadb5"
+      },
+      {
+        "file_sha256": "4031939722ad463d0234112dafde214ae4997019a5519f69eb40953af05a2908",
+        "index": 63,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000063.png",
+        "pixels_sha256": "49f80a1f17ad0abfb0966c6c04077f127e8001f800eb58427ab933727148a206"
+      },
+      {
+        "file_sha256": "7069914c2429aaf64f2b6ad4561eaa0633c338351f9ccdfefc36f8b377635cef",
+        "index": 64,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000064.png",
+        "pixels_sha256": "85877747f863663e3b32268730416b7850e6e3ef10f792268a6ca0c428f81af9"
+      },
+      {
+        "file_sha256": "17e8c6a2b30cd6b1c6f3d11c05962af6a68ccfc7438c25d1634d4e5768e47c8a",
+        "index": 65,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000065.png",
+        "pixels_sha256": "5f09d531f6bf85ae3c8d7c1bd736393a9e7d38de37d8b591852cd74fd2f0d0a5"
+      },
+      {
+        "file_sha256": "319a999dcca35bf1e70a351c917cf2354674957ddaec63908008b2ab20c152e5",
+        "index": 66,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000066.png",
+        "pixels_sha256": "ff7e34e1f581c3d8f2799b151e76b6c75185746eb7a4dd36cfa307ea42762ade"
+      },
+      {
+        "file_sha256": "2b3c27472fb2f4c316dc84557f54d196d22e0e797923d6ea7a59d41db473f0b1",
+        "index": 67,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000067.png",
+        "pixels_sha256": "2f9ac540a1130659d34b1a0830273535d69c6733a6043d9501b035f1281351bf"
+      },
+      {
+        "file_sha256": "e7c75338ef3a8b44ad7c496a5d27dffeecdaaf10acfdafb95f46fbb9c86afb8b",
+        "index": 68,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000068.png",
+        "pixels_sha256": "092d788b49823abc8300a9a80be5d8b11a47c7be3f5d1cedc910485737fcf79c"
+      },
+      {
+        "file_sha256": "8d81191794e37a33a104cb73ac2b3577c3480b26f61a1b21a73e0c1df8528079",
+        "index": 69,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000069.png",
+        "pixels_sha256": "b654d78b973864e5000374d35a6aa2f8cf4b76537ab35001a1ebf0c9833860e4"
+      },
+      {
+        "file_sha256": "b22543b37a087d954b44c68c18b40944e94bf23ddbbe39fb7dbe3677526b70cc",
+        "index": 70,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000070.png",
+        "pixels_sha256": "3578380c4edbc092648ee56f76ff4f85a0f01c071adaf99a27f083020b796ce1"
+      },
+      {
+        "file_sha256": "e821200c90657916ece942d18dfa825f08274def758c33c2dad7f85984b2e1f6",
+        "index": 71,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000071.png",
+        "pixels_sha256": "ef374cf6213d6ed735f6ba6cbfd7cc87f8153c808c6b3a1391ef375ec74a917b"
+      },
+      {
+        "file_sha256": "2e56fbba85186acdabb36013bc207dd84a8fae5ea64fce51279fa87e003b3c7e",
+        "index": 72,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000072.png",
+        "pixels_sha256": "b7d521a0ecc924084d0235e44035759625225e7edb8679b6e81c697efe5d365c"
+      },
+      {
+        "file_sha256": "996e05379ddf014cee8bc33435127fbcaa8367c419b004107f97c10e7f047ad6",
+        "index": 73,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000073.png",
+        "pixels_sha256": "27a118c63ad8430e51ee8607e7492310ddd6a537f198e3d71bfe5728ccba2830"
+      },
+      {
+        "file_sha256": "7e3dbd3fbbc0f147633a00a8e6c926d50bf23af0a3302ec5ef11c8de27ea0b22",
+        "index": 74,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000074.png",
+        "pixels_sha256": "325bdd5f375dc46470e30b4a74be0ef4939739299cdbbc54dc8f0c6afb0312bc"
+      },
+      {
+        "file_sha256": "c776217d32e99ce25937f66f743fc46c955928ec52690d729c635ec1e06fee86",
+        "index": 75,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000075.png",
+        "pixels_sha256": "043b8d82dff4ba602e7607a889b1683ea891cc5ad9113f2480633beebda6cd58"
+      },
+      {
+        "file_sha256": "f72eae2bfc7f48ad4be389fdec87e6f8501f861b5a3d63c98c0674158fe83cee",
+        "index": 76,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000076.png",
+        "pixels_sha256": "23f06edf5cd631337f4cfe0d70d18345aa6351701ce203100f6ff5380e5e9ed3"
+      },
+      {
+        "file_sha256": "e0d07c1ccc14d90be836470502615dae41fc8b695d8ed83feb72541346f45018",
+        "index": 77,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000077.png",
+        "pixels_sha256": "5c53172de4c2d8271f56ae5d525caa6a97f36ff078940183a15974a07b27317b"
+      },
+      {
+        "file_sha256": "13ac7fbca88ac525017bc3bc4ebb4322d076b27f3f0f24326778376a5c0a510b",
+        "index": 78,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000078.png",
+        "pixels_sha256": "d6e881bb283d2470cf515b857ef682ea2e048cd334f784299e9f6f37a43d875a"
+      },
+      {
+        "file_sha256": "911e897d100c857c171fba1e0e0ab60946c46a6106ab328fdf6965c7ec37a937",
+        "index": 79,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000079.png",
+        "pixels_sha256": "c2cf2769bd9073fb15e43065be754e81c2e797172177f5a1ef8d602e7898938e"
+      },
+      {
+        "file_sha256": "77e0c90d9f461c899847d03bec8867644d051e2c9b99ec226f9221ca3e805ef7",
+        "index": 80,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000080.png",
+        "pixels_sha256": "8256c144aae9b5646b738558033ccb60a6f9e1af3dcc962f4d37cfaebd40a5fd"
+      },
+      {
+        "file_sha256": "dfbf3bd0c3b186de4026fe489a2984d5a0bbdf94445e4ac1f95767ec0dedb1b0",
+        "index": 81,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000081.png",
+        "pixels_sha256": "290bfce15e8a3db30bec8fcd4a536cec3096bd2398804a833bc3491259b810d9"
+      },
+      {
+        "file_sha256": "30987eb0a7a849c3750ca9923219ea9b3fde2fab11d8777961ea46a0f73b304b",
+        "index": 82,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000082.png",
+        "pixels_sha256": "463f2b23ee2c8adc61f49a175d42e0b909b35a5a45a25e91cc6ed313d44d185f"
+      },
+      {
+        "file_sha256": "d1855fe2b1f2a8a846a559fdcd90a50970374fc142dcc3472bd12d56c024688d",
+        "index": 83,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000083.png",
+        "pixels_sha256": "16ea17e56549a964340ddb37cd14d7796c0864ee5886d5d692026d4131b84464"
+      },
+      {
+        "file_sha256": "7c048ecc98ed98fe4e122d1c491a9cc1edf83f6cbf6818e231fd40d953842e0b",
+        "index": 84,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000084.png",
+        "pixels_sha256": "89b0b22bdc9444f30b3c48d31e7972168e399d1c0ae5c976496e7e162593420c"
+      },
+      {
+        "file_sha256": "7a784f4baef194fbccfe3a4d28640cf5fd6fe277bf11af931a93f9ece95f6d73",
+        "index": 85,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000085.png",
+        "pixels_sha256": "2ac43324db59f07f7df15da4018ed3db39ea9b8c9fe4e06b1c678c7661832090"
+      },
+      {
+        "file_sha256": "5a466183d1cd796a05bad63e5c37b8416021708b3d0fd6cd6f9dd61431fab4ae",
+        "index": 86,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000086.png",
+        "pixels_sha256": "3794be1c213e65670bcc5a594d9c9c6c59e5164486b34e092a5bbd855e99ac62"
+      },
+      {
+        "file_sha256": "7fc3966a5daf7fc7c0832c3a84140394c3ec3bb14e085e45f10bff8687ca8395",
+        "index": 87,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000087.png",
+        "pixels_sha256": "9968657bb6336de79f7d3f72bbc1667917f2197c51e6bbebdf9de9cce2302c33"
+      },
+      {
+        "file_sha256": "3143156e1b9393a31d1625b6080bb77e2ba3eef6334c5adc998eea5e88f1d2ce",
+        "index": 88,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000088.png",
+        "pixels_sha256": "51841ddeaf08e9a5e222dfa5545a97a982c7792a794e44d14fa694d5e27b1dc2"
+      },
+      {
+        "file_sha256": "eeeef6f600557a3a41204c74e0d699da9a2c11c2acc38a57d614ab840968b18d",
+        "index": 89,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000089.png",
+        "pixels_sha256": "88df4fe93fb4b7cc9b8d6d3726c307b061f4f198170f25643dee9059f95e9f47"
+      },
+      {
+        "file_sha256": "5bed8e6144b36bb20442e9d17880bd31bde02c5d5511f94aae6d12decc9a0aee",
+        "index": 90,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000090.png",
+        "pixels_sha256": "b5f1c9483652ffcfba340cbdf27daf2bdb379b14543f34ade09c1ea6a4f0e1d8"
+      },
+      {
+        "file_sha256": "dbd3b7b95bc55a0a9c309e13cafd3a85bca9d3e2e655df17b79f5f03fdd9c846",
+        "index": 91,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000091.png",
+        "pixels_sha256": "7600a794b370e09b0e65fa766fa6e4155cc0fe29c3be407a67956cd6dbae21dd"
+      },
+      {
+        "file_sha256": "a1d5ee2b73607208fcde4f01107d81c8e4bffbd892a1009794f0c6b811e10b5b",
+        "index": 92,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000092.png",
+        "pixels_sha256": "30f140382769629fc85633e99fc0e351a29f367a1cfeb330f201e7c1b493821a"
+      },
+      {
+        "file_sha256": "68caae3e635a9c37a300d9631fddaa0b6e3fc685e322f9395cad5853fa405f58",
+        "index": 93,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000093.png",
+        "pixels_sha256": "cdee3f59b35bb6887be8c444688eb620deb7d4414922f15e3ecb381700028964"
+      },
+      {
+        "file_sha256": "f695f583dc0a60f5bd473498922f54f58236b155aaeed91bf333f16fe1ec796a",
+        "index": 94,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000094.png",
+        "pixels_sha256": "47e1227908356a2174e218403d64a51d45f0a9aeb14179017420d7caf1b35005"
+      },
+      {
+        "file_sha256": "fe77d839e5d6ac82912e59b39e7321b1598845ebbe41170e6cd71986b9f12e6b",
+        "index": 95,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000095.png",
+        "pixels_sha256": "152679b7115fe28df9e017f09c67c9428f2804828ca06c3bcf772eceeda0067f"
+      },
+      {
+        "file_sha256": "fa671189d50730dd0277b03ad07181be106a05dc53160837403141c1afd8aeda",
+        "index": 96,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000096.png",
+        "pixels_sha256": "aa35af7e879a4e970dcbfb50fe8f5fea2ce5430bbd3bf0ed6494b23b6fa42355"
+      },
+      {
+        "file_sha256": "be1496e76f0df04a495f149c85080b07b71ccdb0a36f69f3a6b613593ce3eb94",
+        "index": 97,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000097.png",
+        "pixels_sha256": "6f893ea34e6cb47e721e53ffd27b9b9e4206ac036edf81e38f640655820ed9bb"
+      },
+      {
+        "file_sha256": "777ecdfeff6c4ad4239ff6bbccbd103fe66723bc5cb303c0840ea8f54e5865bc",
+        "index": 98,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000098.png",
+        "pixels_sha256": "0c45a7853d2367e7e66c4a068ce8a61b05de28f1d1540dbdab66fc3a087e70ff"
+      },
+      {
+        "file_sha256": "9339b5a921beda5d94eaca3f2f5737be17dffb54e33f07cbde04f4f0245c614f",
+        "index": 99,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000099.png",
+        "pixels_sha256": "f2bace888f9260a1ea195135a6b3961de7c15452d79d2a618843eaf7980d39f8"
+      },
+      {
+        "file_sha256": "f3dcdb8b6da3e9187511284ec970ba28a31a0fe2a314ea3b0a8567e306d6d4d7",
+        "index": 100,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000100.png",
+        "pixels_sha256": "1aacaace24f098d4e437dffb48c9b89d661ebdf1f708b7d09884a5ac7d3efaf8"
+      },
+      {
+        "file_sha256": "48623af2cc9c4164553b30634a5ecc050bf1cdde7adfa315eb1fff1bc4c0855c",
+        "index": 101,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000101.png",
+        "pixels_sha256": "82df0c88a3722c88e4e218ccc1526bbc08fd8e035624bf4371b768974275b4ab"
+      },
+      {
+        "file_sha256": "bc390789d47d20432739d5183839a5b102345baa623b91b128ab3ea35da5ddec",
+        "index": 102,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000102.png",
+        "pixels_sha256": "8ce8fdd03673108bc1034096fe7aa64c48ed16c11873da0b0c2ff94858fef027"
+      },
+      {
+        "file_sha256": "c3788c385f6e3acaafe96aea40d0722f654ce1714e3566368e34eb121d8c19d5",
+        "index": 103,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000103.png",
+        "pixels_sha256": "1217bd646ef6450887bd65e5bf1093cc0541912c79e1978cb0ae73852afd73ed"
+      },
+      {
+        "file_sha256": "676287b032f136768ca3fd68f43430de5064935f60f2a306c1e6e82f61af647a",
+        "index": 104,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000104.png",
+        "pixels_sha256": "26f823632b8ede3ec192c800b8323ed03cd5313efe71150a9fae3f76f3c2fbf3"
+      },
+      {
+        "file_sha256": "272fe2d03b9bf265b32ffd8e689119ee7c3930318791ad517b20ec0c8ccc744d",
+        "index": 105,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000105.png",
+        "pixels_sha256": "9ab01abbf5a61f15e3a1f42f50827008da1f6c8344cc331ddf051ae5d5139414"
+      },
+      {
+        "file_sha256": "31e26d5aa00ac5c0ed5bdb303d96f376ffe66e520d548f57925198c2ff8663ec",
+        "index": 106,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000106.png",
+        "pixels_sha256": "487c01c59ef1346eed99e0b179aa03a18eb5d88a86ab0181516b60fec37cd02e"
+      },
+      {
+        "file_sha256": "e845caa0371ac9627f5413ba5d6ee51af8f92ebb635dd19cabd405119993e940",
+        "index": 107,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000107.png",
+        "pixels_sha256": "805447ad7a4a8dbbd1e6d192ceed6724829334778b2d95db879ecc94cff77dd4"
+      },
+      {
+        "file_sha256": "1a0fb9296b6e0695a841f4f6e20ec64c940cfe1c2d25208622e07c0c7022736d",
+        "index": 108,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000108.png",
+        "pixels_sha256": "01993188733ab3bf49f7191976f5b87293406acc77cc53025f94021d32ce7765"
+      },
+      {
+        "file_sha256": "084001033a6aab7e9ebe4664a87cc305ac4fbf97b6dda414d45c99026863350c",
+        "index": 109,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000109.png",
+        "pixels_sha256": "988b3b722b671069826f19f990cba4175b4f0d58c356bf5ecb8fce172851b4a4"
+      },
+      {
+        "file_sha256": "25007f561a7d007a5fab2b5c0fa7160cd729f501d7fc92838444e904695ed2cc",
+        "index": 110,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000110.png",
+        "pixels_sha256": "1ae097db519a6a3a8da598bf0ed633d1eaa8fcd38a9e99fefa37e9754ef8ff30"
+      },
+      {
+        "file_sha256": "8aab6508b4aeb31676d5c48140fa17bda885edccad8bb85285198b6b6b9a6496",
+        "index": 111,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000111.png",
+        "pixels_sha256": "d63c6d0e0a442efef7cf9f89c3520caaba29560e37fa131c4a454333ea277d5f"
+      },
+      {
+        "file_sha256": "fae3a8f3b3627aca6c8d20f9ef3e2f18c302284bcfd6fdf3db72a9ea149ccf85",
+        "index": 112,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000112.png",
+        "pixels_sha256": "51916887663b79f91ac28d38c44886c4654da7d23e2ec14fb01483faed28134b"
+      },
+      {
+        "file_sha256": "9e5c4ae0cc13315e4032e5c9fbd5107704b4747b556655bd5a3adc1028006f0e",
+        "index": 113,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000113.png",
+        "pixels_sha256": "b46f566ec0c641e56b686f7e896ae22a4f69e60b844aac3cd7b496f2e1a9aecc"
+      },
+      {
+        "file_sha256": "8c7e4ada8ae43fe442e11b12ac9c53dc522022bdb80371d03c87105ae76e68a7",
+        "index": 114,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000114.png",
+        "pixels_sha256": "8fe0c0086fbef56c636f32653fe550f1935293b3eab899d361c46ff8d1a30800"
+      },
+      {
+        "file_sha256": "185819806fb6c4ad49b82d449f1a532bdd6df802d59305dba4ffc1c1b7611d3f",
+        "index": 115,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000115.png",
+        "pixels_sha256": "c6ad376e3a4d9a8882be75947955cccdbcac568c8b371c9892041bb9b07ba17a"
+      },
+      {
+        "file_sha256": "65f0fe79b1d2c816f0fee3eb67bbddb6d597ca50caf8a89c7cd91f6dbffc1f90",
+        "index": 116,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000116.png",
+        "pixels_sha256": "e07643db9a8393bd453029bf573b412df43ebb476fa00865962e66e4db12fc11"
+      },
+      {
+        "file_sha256": "4b8f26af71d33defedb963511b776831f4d4623440b3c2d3ece0ed2a102a6bad",
+        "index": 117,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000117.png",
+        "pixels_sha256": "16631a4b09b645bf3215729f6feba9004faa1aa895b88a35e904b2fe35966ca9"
+      },
+      {
+        "file_sha256": "1fcc43796efccf3ca294757cae6bafdb0e37679a3d83d29fc7d50e2653c588fe",
+        "index": 118,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000118.png",
+        "pixels_sha256": "4e5123348dfc78d47fb79bc6ec20ea71cc2540fb7715a847d17be70797fa3065"
+      },
+      {
+        "file_sha256": "919ffd16368ef6dbf1086de32f3a6e25debe8906e03a24e333093bea8c72ab00",
+        "index": 119,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000119.png",
+        "pixels_sha256": "a0d0080f45c253c1a0bc869122413b8b25d0e38076dac6de00a581f46a54ae28"
+      },
+      {
+        "file_sha256": "d2d276db1d2ed3db7a20fb37b52b316c58cda0dff919dac0672a782ff6d75de7",
+        "index": 120,
+        "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/foreground_000120.png",
+        "pixels_sha256": "7fdff6c0752701db9f988abb4fda6be52b564d9639b50a1fd2b44f57d9ef1755"
+      }
+    ],
+    "temporal_matte_manifest": {
+      "bytes": 191043,
+      "path": "/Users/jinchoi/Code/video/artifacts/motion-v1/matte/veed-vp9-02/temporal_matte_manifest.json",
+      "sha256": "89ff5e6c753f7f733c85f7f9921ce085275f21bc5b43c34faa5753775d386ca6"
+    },
+    "temporal_matte_manifest_digest_sha256": "f39d99ff9462cf730ef1cee1c28c7dc7ec250ac5d376c3d35f308fa584817d18"
+  }
+}
