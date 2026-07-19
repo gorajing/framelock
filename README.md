@@ -2,7 +2,7 @@
 
 **Generate one AI character performance. Reshoot its world without rerolling the approved performance.**
 
-FrameLock lets AI filmmakers answer environment notes without losing approved character work. fal Kling O3 generates the replacement world; FrameLock restores a declared protected core from the source performance, then a separate persisted-frame verifier decides whether the reshoot can be admitted.
+FrameLock lets AI filmmakers change a video's environment without rerolling an approved character performance. It validates and hashes the original sequence, uses fal VEED to extract a moving foreground mask, Nano Banana Pro to create replacement environment plates and Kling O3 to animate the selected world. FrameLock then restores the approved character locally and independently verifies that its protected pixels remain unchanged.
 
 > Protected core verified — canonical pre-encode frame sequence.
 
@@ -30,15 +30,16 @@ All four share one 1280 × 720, 121-frame, 24 FPS timeline. The route reads trac
 
 The verifier is falsifiable, not a green badge. A bound negative control changes one protected RGB channel sample by a value of one at frame 60. FrameLock returns `FAIL` and leaves the clean canonical evidence unchanged.
 
-## How it works
+## How it works technically
 
-1. Bind the approved source performance and one temporal mask per frame.
-2. Erode every mask by four pixels to define the exact protected core.
-3. Generate a replacement world with `fal-ai/kling-video/o3/standard/image-to-video`.
-4. Blend the mask boundary for appearance and restore source pixels exactly inside each protected core.
-5. Reopen the persisted canonical frames and admit the result only after the separate verifier passes.
+1. **Canonicalize the performance.** FrameLock accepts an owned, locked-camera MP4 at exactly 1280 × 720, 121 frames and 24 FPS. It decodes the video into canonical RGB frames, hashes the source and binds every later decision to that digest.
+2. **Extract the moving character.** The filmmaker confirms one foreground subject. `veed/video-background-removal` returns an alpha-bearing video, which FrameLock converts into 121 soft masks. Automated temporal checks and a full-timeline human review gate the mask before it can be used.
+3. **Create the new world.** `fal-ai/nano-banana-pro` generates four empty 16:9 environment plates from one sentence. The filmmaker selects a plate, then `fal-ai/kling-video/o3/standard/image-to-video` animates it with audio disabled and locked-camera constraints.
+4. **Normalize and composite locally.** FrameLock admits only a comparable Kling result, using a declared scale-and-center-crop plus frames 0–120 when normalization is required. It blends the soft mask boundary while restoring source RGB values exactly inside a four-pixel-eroded protected core.
+5. **Verify independently.** A separate verifier reopens the persisted source, mask, generated world and composite. Approval requires 121 nonempty protected cores, zero changed protected RGB channel samples, zero maximum channel delta and 121 matching protected-core hashes.
+6. **Export the evidence.** The product writes the delivery MP4 and a canonical proof bundle. The exact claim applies to the persisted pre-encode frame sequence; the lossy MP4, blended boundary, mask correctness and physical relighting remain outside that claim.
 
-Kling generated the world; it did not preserve the character. FrameLock restored the declared core and verified the accepted composite before video encoding.
+Every paid fal action is server-owned, explicitly authorized and persisted before submission. FrameLock polls only a saved request identity and never silently retries an ambiguous paid request. API keys, provider URLs, request IDs and local filesystem paths stay outside browser payloads.
 
 ## Run locally
 
@@ -49,11 +50,11 @@ pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000/motion-demo](http://localhost:3000/motion-demo).
+Open [http://localhost:3000](http://localhost:3000) for the product workflow. The prebuilt proof remains available at [http://localhost:3000/motion-demo](http://localhost:3000/motion-demo).
 
 ## Honest boundaries
 
-- The current evidence binds the temporal matte and automated QA, but not a human reviewer attestation. Mask semantics still require human judgment.
+- The product requires full-timeline human mask review. The bundled Motion demo predates that product-level attestation, so mask semantics still require human judgment.
 - Exact equality stops at the four-pixel-eroded core. The blended edge can artifact, and restored source pixels are not physically relit.
 - MP4s are lossy previews. The canonical frames carry the proof.
 
