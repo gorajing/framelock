@@ -2,11 +2,13 @@
 
 **Generate an AI character performance once. Reshoot its world without rerolling the approved performance.**
 
-FrameLock is a proof-oriented generative-video reshoot pipeline. Motion v1 keeps an approved moving character performance as the source of truth, generates a new moving world with fal, restores the declared protected core from canonical source frames and independently verifies the accepted composite before video encoding.
+FrameLock is a proof-oriented generative-video reshoot pipeline. Motion v1 keeps an approved moving character performance as the source of truth, generates a new moving world with fal, restores the declared protected core from canonical source frames and verifies the accepted composite with a separate persisted-frame pass before video encoding.
+
+**Public repository:** [github.com/gorajing/framelock](https://github.com/gorajing/framelock)
 
 > Protected core verified — canonical pre-encode frame sequence.
 
-That claim is deliberately exact and narrow. It covers RGB equality inside a frame-specific core produced by eroding the approved character mask by four pixels. It does not claim that the tracking or mask is semantically correct, that the feathered boundary is exact, that the protected character was physically relit or that the lossy MP4 preview is proof.
+That claim is deliberately exact and narrow. It covers RGB equality inside a frame-specific core produced by eroding the bound character mask by four pixels. It does not claim that the tracking or mask is semantically correct, that the feathered boundary is exact, that the protected character was physically relit or that the lossy MP4 preview is proof.
 
 ## Motion v1 hero
 
@@ -16,7 +18,7 @@ The current hero is a five-second moving-character reshoot:
 - one approved moving FRM-01 character performance
 - one ordered temporal matte sequence and a four-pixel-eroded protected core on every frame
 - one fal-generated neon transit world
-- one independently admitted FrameLock composite
+- one separately verified and admitted FrameLock composite
 
 The selected world came from `fal-ai/kling-video/o3/standard/image-to-video`, request `019f7806-2b52-7062-89b0-98eb664401e6`. FrameLock does not claim that Kling preserved the character. Kling generated the replacement world, then FrameLock restored the approved performance and audited the result.
 
@@ -49,7 +51,7 @@ The Motion v1 spend ledger currently records **$7.66575 reserved estimated cost*
 ```mermaid
 flowchart LR
     SOURCE["Approved moving performance"] --> DECODE["121 canonical RGB24 frames"]
-    MATTE["121 approved temporal masks"] --> CORE["4 px-eroded protected cores"]
+    MATTE["121 bound temporal masks"] --> CORE["4 px-eroded protected cores"]
     FAL["fal-generated moving world"] --> COMPOSE["Boundary blend plus exact core restore"]
     DECODE --> COMPOSE
     CORE --> COMPOSE
@@ -91,7 +93,7 @@ The current final local tree passed Python proof/media tests (`204 passed`), Vit
 
 - Selected-world record: `artifacts/motion-v1/background-selection-final.json`
 - Canonical source: `artifacts/motion-v1/source/canonical-02/source-canonical.mp4`
-- Approved temporal matte: `artifacts/motion-v1/matte/veed-vp9-02/temporal_matte_manifest.json`
+- Bound temporal matte: `artifacts/motion-v1/matte/veed-vp9-02/temporal_matte_manifest.json`
 - Canonical generated world: `artifacts/motion-v1/background/canonical-01/source-canonical.mp4`
 - Admitted Motion proof: `artifacts/motion-v1/admissions/kling-background-01/motion_reshoot_admission.json`
 - Negative control: `artifacts/motion-v1/negative-controls/kling-background-02/`
@@ -114,13 +116,13 @@ The older hardened synthetic replay remains documented in [Hardened synthetic re
 
 ## Honest limitations
 
-- The temporal tracker or alpha model proposes the mask. Human approval and hash binding establish what FrameLock protects; FrameLock does not prove that the mask represents the “correct” character.
+- The temporal tracker or alpha model proposes the mask. The current evidence binds that matte and its automated QA, but it does not bind a human reviewer attestation or prove that the mask represents the “correct” character.
 - The exact guarantee stops at the four-pixel-eroded core. The soft boundary is intentionally outside the equality contract and can show a halo, matte chatter or imperfect contact.
 - Exact restoration preserves source pixels, so the protected character is not physically relit to match the generated environment.
 - The selected shot avoids full occlusion and complex foreground crossings. Motion v1 does not solve depth ordering, multi-character interaction or arbitrary camera motion.
 - MP4 files are lossy viewing previews. The canonical pre-encode frame sequence and audit carry the proof.
 - Local manifests are not externally signed or independently timestamped.
-- Repository publication, deployment, public media upload, demo upload and hackathon submission have not happened.
+- The public repository and its bundled Motion viewing media are published at the link above. A public deployment, uploaded demo video and hackathon submission have not happened.
 
 ## Project documents
 
@@ -134,3 +136,4 @@ The older hardened synthetic replay remains documented in [Hardened synthetic re
 - [Local definition-of-done audit](./docs/LOCAL_DOD_AUDIT.md)
 - [Human handoff](./docs/HUMAN_HANDOFF.md)
 - [Submission package](./docs/SUBMISSION_PACKAGE.md)
+- [Timed demo voiceover](./docs/DEMO_VOICEOVER.md)

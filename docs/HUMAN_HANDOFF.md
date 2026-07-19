@@ -8,7 +8,7 @@ The current hero is Motion v1:
 
 > Generate an AI character performance once. Reshoot its world without rerolling the approved performance.
 
-The local hero route, canonical proof and deliberate negative control exist. The previous static AI-source job remains an immutable fallback. Repository publication, deployment, public media, demo upload and hackathon submission have not been performed or authorized by the local build work.
+The local hero route, canonical proof and deliberate negative control exist. The previous static AI-source job remains an immutable fallback. The public repository and bundled Motion viewing media are published at [github.com/gorajing/framelock](https://github.com/gorajing/framelock). A public deployment, demo upload and hackathon submission have not been performed.
 
 ## 1. Reopen the Motion v1 hero
 
@@ -57,7 +57,7 @@ The clean evidence must show:
 | Maximum protected-core channel delta | 0 |
 | Deterministic recomposition | Passed |
 
-The protected core is derived independently on every frame by eroding the approved character mask by four pixels. The exact claim does not extend to the soft boundary.
+The protected core is derived separately on every frame by eroding the bound character mask by four pixels. The exact claim does not extend to the soft boundary.
 
 The canonical admission is:
 
@@ -95,7 +95,7 @@ This challenge demonstrates that the verifier rejects the smallest represented p
 
 Use:
 
-> FrameLock guarantees exact equality inside the approved four-pixel-eroded core. The tracker proposes the mask, the boundary is blended and the restored character is not physically relit.
+> FrameLock guarantees exact equality inside the declared four-pixel-eroded core. The tracker proposes the mask, the boundary is blended and the restored character is not physically relit.
 
 Also state that:
 
@@ -161,7 +161,17 @@ uv run pytest
 
 Then reopen `/motion-demo` and repeat full synchronized playback plus the frame-60 corruption challenge at desktop and mobile widths. Record replacement counts only from that changed tree. Older static-release counts and earlier Motion integration counts are historical checkpoints, not a substitute for the current final run.
 
-## 9. Publish and submit only with explicit authorization
+## 9. Local submission cut
+
+The silent submission cut has been recorded locally at:
+
+> `tmp/submission/framelock-demo-silent.mp4`
+
+It is 2:18.83, 1280 × 720, 30 FPS H.264 with a silent 48 kHz AAC stereo track. Its SHA-256 is `9ec7e85b20017af35f662ec812ee75024fc96796a04156dd8970778bdd09f21c`. The full file decodes without error, its synchronized playback window contains real motion and frame review confirmed the admitted proof plus red corruption state are legible at 720p.
+
+The local MP4 is ignored by Git and has not been uploaded. Record the narration from [the timed demo voiceover](./DEMO_VOICEOVER.md), replace the silent track and watch the final voiced export from beginning to end before upload.
+
+## 10. Publish and submit only with explicit authorization
 
 Before any external action:
 
@@ -172,4 +182,4 @@ Before any external action:
 - deploy only after an explicit deployment decision and a production packaging review
 - record, upload and submit only after explicit authorization
 
-The localhost service is not a production deployment. A public GitHub repository, public demo URL, uploaded video and hackathon submission remain human-owned release actions.
+The localhost service is not a production deployment. The GitHub repository and bundled Motion viewing media are public. A public demo URL, uploaded video and hackathon submission remain human-owned release actions.

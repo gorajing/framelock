@@ -68,7 +68,7 @@ const motionViews: readonly MotionView[] = [
     step: "01 / Approve",
     title: "Original performance",
     detail: "The provenance-bound character performance we refuse to reroll.",
-    placeholder: "Bind the owned source performance here",
+    placeholder: "Bind the source performance here",
   },
   {
     kind: "raw",
@@ -82,7 +82,7 @@ const motionViews: readonly MotionView[] = [
     kind: "mask",
     step: "03 / Track",
     title: "Moving protection",
-    detail: "One approved protection mask aligned to each source frame.",
+    detail: "One bound protection mask aligned to each source frame.",
     placeholder: "Bind the temporal mask preview here",
   },
   {
@@ -608,11 +608,11 @@ export function MotionDemo({
 
           {admittedEvidence ? (
             <article className={styles.verdictCard}>
-              <span>Independent audit result</span>
+              <span>Separate persisted-frame audit</span>
               <strong>{admittedEvidence.audit.changedProtectedPixels}</strong>
               <h3>changed protected pixels</h3>
               <p>
-                Every pixel inside every approved moving core equals its
+                Every pixel inside every declared moving core equals its
                 corresponding source pixel.
               </p>
               <div className={styles.passStamp}>
@@ -622,7 +622,7 @@ export function MotionDemo({
             </article>
           ) : (
             <article className={styles.pendingVerdict} data-audit-result="pending">
-              <span>Independent audit</span>
+              <span>Separate persisted-frame audit</span>
               <strong>PROOF PENDING</strong>
               <h3>No exactness result is admitted.</h3>
               <p>

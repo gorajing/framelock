@@ -23,7 +23,7 @@ The historical static AI-source job remains an immutable fallback. Its proof, jo
 | Requirement | Status | Direct evidence | Remaining boundary |
 | --- | --- | --- | --- |
 | One approved moving source under the exact media contract | **Passed** | Canonical source is 1280 × 720, 121 frames and 24 FPS. | The source is project-controlled AI media, not camera-original footage. |
-| One ordered moving mask sequence | **Passed** | The temporal matte binds 121 ordered soft masks and edit masks. Every frame yields a non-empty four-pixel-eroded core. | The tracker proposes the mask; human approval, not FrameLock, establishes semantic correctness. |
+| One ordered moving mask sequence | **Passed** | The temporal matte binds 121 ordered soft masks and edit masks. Every frame yields a non-empty four-pixel-eroded core. | The tracker proposes the mask. Semantic correctness still requires human review; no reviewer attestation is bound. |
 | One visually strong fal-generated replacement world | **Passed** | Kling O3 Standard image-to-video request `019f7806-2b52-7062-89b0-98eb664401e6` produced the selected neon transit world. | The generated world is admitted as background evidence, not proof that the model preserved the character. |
 | Exact protected-core equality on every canonical frame | **Passed** | 121/121 frames and 8,390,666 protected-core pixels audited; zero changed pixels, zero changed RGB channel samples and maximum delta zero. | The boundary ring and MP4 preview are outside the exactness claim. |
 | Deterministic composition and artifact admission | **Passed** | The admission reopens its bound evidence and reports deterministic recomposition passed. | Local manifests are not externally signed or timestamped. |
@@ -67,7 +67,7 @@ The frozen claim is:
 | Maximum protected-core channel delta | 0 |
 | Deterministic recomposition | Passed |
 
-The protected region varies with the moving character. Each frame's approved mask is eroded by four pixels before the exact equality check. Soft alpha blending is used outside that core, so a visually blended boundary can coexist with a mathematically exact protected interior.
+The protected region varies with the moving character. Each frame's bound mask is eroded by four pixels before the exact equality check. Soft alpha blending is used outside that core, so a visually blended boundary can coexist with a mathematically exact protected interior.
 
 The MP4 preview independently represents the accepted sequence for viewing, but lossy encode prevents it from serving as byte-equality proof. The canonical pre-encode frames and audit carry the claim.
 
@@ -141,7 +141,7 @@ Record exact counts only from the final tree. The build must continue to fail cl
 
 ## Honest product boundary
 
-- Human approval defines what the temporal mask means.
+- Human review should define what the temporal mask means; the current portable evidence does not bind a reviewer attestation.
 - Exactness stops at the four-pixel-eroded core.
 - Boundary blending can produce a halo, matte chatter or imperfect ground contact.
 - Exact source restoration does not physically relight the protected character.
